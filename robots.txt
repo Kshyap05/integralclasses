@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://numiq-website.vercel.app/sitemap.xml
+
+Sitemap: https://integralclasses.vercel.app/sitemap.xml
