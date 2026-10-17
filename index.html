@@ -3,8 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NumIQ | Premier Math Teacher Pedagogy & Training Hub in Ludhiana</title>
-  <meta name="description" content="Empowering math educators across Ludhiana & Punjab with modern CRA pedagogy, CBSE, ICSE & PSEB curriculum frameworks, and interactive teaching tools.">
+  <title>NumIQ | Classes 6-12 Teacher Pedagogy & Faculty Development Hub in Ludhiana</title>
+  <meta name="description" content="Premier faculty training hub in Ludhiana for Class 6 to 12 educators across Medical, Non-Medical, Commerce, and Arts streams (CBSE, PSEB & ICSE/ISC).">
+  <meta name="keywords" content="Teacher Training Ludhiana, Class 6 to 12 Pedagogy, Medical Non-Medical Faculty Training, Commerce Arts Teacher Workshops Punjab, PSEB CBSE Ludhiana, NumIQ">
+  <link rel="canonical" href="https://numiq-website.vercel.app/">
+
+  <!-- Local Educational Organization Schema (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "NumIQ",
+    "url": "https://numiq-website.vercel.app/",
+    "description": "Comprehensive faculty training and pedagogy laboratory in Ludhiana for Class 6-12 across Medical, Non-Medical, Commerce, and Arts streams.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ludhiana",
+      "addressRegion": "Punjab",
+      "postalCode": "141001",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "30.9010",
+      "longitude": "75.8573"
+    },
+    "areaServed": ["Ludhiana", "Jalandhar", "Amritsar", "Chandigarh", "Punjab"]
+  }
+  </script>
+
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -35,14 +63,14 @@
     .animate-mascot { animation: floatMascot 4s ease-in-out infinite; }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased min-h-screen">
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col justify-between">
 
   <!-- Top Announcement Bar -->
   <div class="bg-brand-navy text-white text-xs sm:text-sm py-2 px-4 text-center font-medium">
     <div class="max-w-7xl mx-auto flex items-center justify-center gap-2">
       <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-      <span>Now booking <strong>In-Person Math Faculty Workshops</strong> across Ludhiana schools (CBSE, ICSE & PSEB).</span>
-      <a href="#workshops" class="underline text-brand-cyan hover:text-white ml-2 transition">Explore Sessions &rarr;</a>
+      <span>Now booking <strong>Senior Secondary (Med, Non-Med, Commerce, Arts) & Middle School Faculty FDPs</strong> across Ludhiana schools.</span>
+      <a href="#workshops" class="underline text-brand-cyan hover:text-white ml-2 transition">Schedule Session &rarr;</a>
     </div>
   </div>
 
@@ -71,15 +99,16 @@
           <span class="text-2xl font-black tracking-tight text-brand-navy flex items-center">
             Num<span class="text-brand-blue">IQ</span>
           </span>
-          <span class="text-[10px] tracking-wider uppercase font-bold text-slate-400 block -mt-1">Ludhiana Pedagogy Hub</span>
+          <span class="text-[10px] tracking-wider uppercase font-bold text-slate-400 block -mt-1">Class 6–12 All-Streams Pedagogy • Ludhiana</span>
         </div>
       </div>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-        <a href="#lab" class="hover:text-brand-blue transition">Visual Math Lab</a>
-        <a href="#curriculum" class="hover:text-brand-blue transition">Curriculum Tracks (CBSE/PSEB)</a>
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-600">
+        <a href="#streams" class="hover:text-brand-blue transition">Class 11-12 Streams</a>
+        <a href="#foundations" class="hover:text-brand-blue transition">Class 6-10 Foundations</a>
+        <a href="#lab" class="hover:text-brand-blue transition">Stream Sandbox</a>
+        <a href="#curriculum" class="hover:text-brand-blue transition">CBSE/PSEB/ICSE</a>
         <a href="#workshops" class="hover:text-brand-blue transition">Ludhiana Workshops</a>
-        <a href="#pricing" class="hover:text-brand-blue transition">School Licensing</a>
       </nav>
 
       <div class="flex items-center gap-3">
@@ -97,38 +126,46 @@
         
         <div class="lg:col-span-7 space-y-6">
           <div class="inline-flex items-center gap-2 bg-amber-100 border border-amber-300 px-3.5 py-1.5 rounded-full text-xs font-bold text-amber-900">
-            <span>📍 Ludhiana’s First Specialized Math Pedagogy Initiative</span>
+            <span>📍 Classes 6 to 12 • All Streams • Ludhiana & Punjab</span>
           </div>
 
           <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-brand-navy leading-tight">
-            Empowering Math Teachers to Build <span class="text-brand-blue">Fearless Thinkers</span>.
+            Comprehensive Pedagogy for Every <span class="text-brand-blue">Class, Subject & Stream</span>.
           </h1>
 
           <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
-            NumIQ equips teachers across <strong>Ludhiana & Punjab</strong> with the Concrete-Representational-Abstract (CRA) framework, inquiry lesson plans, and classroom tools aligned directly with <strong>CBSE, ICSE, and PSEB</strong> standards.
+            NumIQ equips school faculties across <strong>Ludhiana & Punjab</strong> to transform rote learning into deep conceptual mastery — covering <strong>Class 6–10 foundations</strong> and <strong>Class 11–12 Medical, Non-Medical, Commerce, and Arts</strong> departments.
           </p>
 
           <div class="flex flex-wrap gap-4 pt-2">
-            <a href="#lab" class="bg-brand-navy hover:bg-brand-dark text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-md transition">
-              Try Interactive Math Lab &rarr;
+            <a href="#streams" class="bg-brand-navy hover:bg-brand-dark text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-md transition">
+              Explore 11-12 Streams &rarr;
             </a>
             <a href="#workshops" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-sm px-6 py-3.5 rounded-xl transition">
-              Schedule Faculty Training
+              Schedule Faculty FDP
             </a>
           </div>
 
-          <div class="pt-4 flex flex-wrap items-center gap-6 text-xs text-slate-500 font-semibold">
-            <span><strong class="text-brand-navy font-extrabold">CBSE</strong> Aligned</span>
-            <span><strong class="text-brand-navy font-extrabold">PSEB</strong> Bilingual Ready</span>
-            <span><strong class="text-brand-navy font-extrabold">ICSE</strong> Mastery</span>
-            <span><strong class="text-brand-navy font-extrabold">Olympiad</strong> Foundations</span>
+          <div class="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs text-slate-600 font-semibold border-t border-slate-100 pt-6">
+            <div class="border-l-2 border-emerald-500 pl-2">
+              <strong class="text-slate-900 block font-bold">Medical</strong> Physics, Chem, Bio
+            </div>
+            <div class="border-l-2 border-blue-500 pl-2">
+              <strong class="text-slate-900 block font-bold">Non-Medical</strong> PCM, Comp Sci
+            </div>
+            <div class="border-l-2 border-amber-500 pl-2">
+              <strong class="text-slate-900 block font-bold">Commerce</strong> Accounts, Eco, BST
+            </div>
+            <div class="border-l-2 border-purple-500 pl-2">
+              <strong class="text-slate-900 block font-bold">Arts / Humanities</strong> Pol Sci, Hist, Geo
+            </div>
           </div>
         </div>
 
         <!-- Mascot & Tip Box -->
         <div class="lg:col-span-5 flex justify-center">
           <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 shadow-lg max-w-md w-full text-center">
-            <div class="w-48 h-48 mx-auto animate-mascot">
+            <div class="w-44 h-44 mx-auto animate-mascot">
               <svg viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow">
                 <path d="M 120,40 C 60,40 20,80 20,120 C 20,160 60,190 110,190 C 170,190 220,130 270,70 C 310,25 370,30 380,85 C 390,140 330,180 270,180 C 220,180 185,150 160,120" stroke="#0B2545" stroke-width="32" stroke-linecap="round"/>
                 <path d="M 120,40 C 60,40 20,80 20,120 C 20,160 60,190 110,190 C 150,190 185,160 215,130" stroke="url(#paint0_hero)" stroke-width="32" stroke-linecap="round"/>
@@ -147,21 +184,23 @@
             </div>
 
             <h3 class="text-xl font-bold text-brand-navy mt-4">Meet Numi</h3>
-            <p class="text-xs text-slate-500 font-medium">The Infinite Pencil & Pedagogical Guide</p>
+            <p class="text-xs text-slate-500 font-medium">Cross-Disciplinary Pedagogy Mentor</p>
 
             <div class="mt-4 bg-white border border-slate-200 rounded-xl p-3 text-left">
-              <span class="text-[11px] font-bold text-brand-blue uppercase tracking-wider block mb-1">Punjab Classroom Tip:</span>
+              <span id="tip-stream-badge" class="text-[11px] font-bold text-brand-blue uppercase tracking-wider block mb-1">
+                Class 11-12 Medical (Bio/Chem) Tip:
+              </span>
               <p id="daily-tip" class="text-xs text-slate-700 italic">
-                "When introducing negative integers to Class 6, use local temperature drops or shop ledger credits/debits (ਜਮ੍ਹਾਂ/ਖਰਚ) before formal minus signs."
+                "In Genetics and Biomolecules, teach students to sketch metabolic cascades and Punnett squares before rote-memorizing enzyme nomenclatures."
               </p>
             </div>
 
             <div class="mt-4 flex gap-2">
-              <button onclick="newPedagogyTip()" class="flex-1 py-2 text-xs font-bold bg-slate-200 hover:bg-slate-300 text-slate-700 rounded-lg transition">
-                Next Tip
+              <button onclick="newStreamTip()" class="flex-1 py-2 text-xs font-bold bg-slate-200 hover:bg-slate-300 text-slate-700 rounded-lg transition">
+                Next Stream Tip
               </button>
               <button onclick="switchBilingualTerm()" class="flex-1 py-2 text-xs font-bold bg-amber-100 hover:bg-amber-200 text-amber-900 rounded-lg transition">
-                Toggle Punjabi Term
+                Bilingual Vocab
               </button>
             </div>
           </div>
@@ -171,120 +210,291 @@
     </div>
   </section>
 
-  <!-- Interactive Sandbox -->
+  <!-- Class 11-12 Senior Secondary Streams Section -->
+  <section id="streams" class="py-16 bg-[#F8FAFC] border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-extrabold uppercase tracking-widest text-brand-blue">Class 11 & 12 Senior Secondary</h2>
+        <p class="text-3xl font-extrabold text-brand-navy mt-2">Specialized Pedagogy by Stream</p>
+        <p class="text-slate-600 text-sm mt-2">Designed to elevate board exam results (CBSE / PSEB / ISC) while cementing deep foundations for NEET, JEE, CUET, and CA Foundation exams.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Stream 1: Medical -->
+        <div class="bg-white border border-slate-200 rounded-3xl p-6 hover:shadow-lg transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs font-bold">🩺 Medical Stream (PCB)</span>
+            <span class="text-xs text-slate-400 font-semibold">NEET & Board Ready</span>
+          </div>
+          <h3 class="text-xl font-bold text-brand-navy">Physics, Chemistry, Biology & Biotech</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            Transition students from passive diagram-copying to active anatomical inquiry, physiological mechanisms, organic reaction mechanisms, and thermodynamics modeling.
+          </p>
+          <div class="mt-4 grid grid-cols-2 gap-2 text-xs text-slate-700 bg-slate-50 p-3 rounded-xl border border-slate-100">
+            <div>• Botany & Zoology Concept Maps</div>
+            <div>• Reaction Mechanism Pathways</div>
+            <div>• Electrodynamics Visualization</div>
+            <div>• Genetics Problem-Solving Labs</div>
+          </div>
+        </div>
+
+        <!-- Stream 2: Non-Medical -->
+        <div class="bg-white border border-slate-200 rounded-3xl p-6 hover:shadow-lg transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-blue-100 text-brand-blue rounded-full text-xs font-bold">⚙️ Non-Medical Stream (PCM)</span>
+            <span class="text-xs text-slate-400 font-semibold">JEE & Advanced Tech</span>
+          </div>
+          <h3 class="text-xl font-bold text-brand-navy">Physics, Chemistry, Higher Math & CS</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            Equip educators to demystify Calculus, 3D Geometry, Mechanics, and Computer Science (Python/SQL) through geometric interpretations and structured analytical routines.
+          </p>
+          <div class="mt-4 grid grid-cols-2 gap-2 text-xs text-slate-700 bg-slate-50 p-3 rounded-xl border border-slate-100">
+            <div>• Differential & Integral Calculus Lab</div>
+            <div>• Vector & Rotational Dynamics</div>
+            <div>• Physical Chemistry Numericals</div>
+            <div>• Computational Logic & Data Handling</div>
+          </div>
+        </div>
+
+        <!-- Stream 3: Commerce -->
+        <div class="bg-white border border-slate-200 rounded-3xl p-6 hover:shadow-lg transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-amber-100 text-amber-900 rounded-full text-xs font-bold">📊 Commerce Stream</span>
+            <span class="text-xs text-slate-400 font-semibold">CA Foundation & CUET</span>
+          </div>
+          <h3 class="text-xl font-bold text-brand-navy">Accountancy, Business Studies & Economics</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            Replace mechanical double-entry memorization with real-life corporate balance sheets, startup case studies, macroeconomic indicators, and Applied Mathematics frameworks.
+          </p>
+          <div class="mt-4 grid grid-cols-2 gap-2 text-xs text-slate-700 bg-slate-50 p-3 rounded-xl border border-slate-100">
+            <div>• Balance Sheet Flow Modeling</div>
+            <div>• Macroeconomic Indian Case Studies</div>
+            <div>• Business Strategy & Case Analysis</div>
+            <div>• Financial Mathematics & Statistics</div>
+          </div>
+        </div>
+
+        <!-- Stream 4: Arts / Humanities -->
+        <div class="bg-white border border-slate-200 rounded-3xl p-6 hover:shadow-lg transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-purple-100 text-purple-900 rounded-full text-xs font-bold">🏛️ Arts / Humanities Stream</span>
+            <span class="text-xs text-slate-400 font-semibold">Civil Services & Analysis</span>
+          </div>
+          <h3 class="text-xl font-bold text-brand-navy">Political Science, History, Sociology & Geo</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            Foster rigorous essay synthesis, comparative constitutional analysis, cartographic geography interpretation, and historiographical debates rather than simple chapter recitation.
+          </p>
+          <div class="mt-4 grid grid-cols-2 gap-2 text-xs text-slate-700 bg-slate-50 p-3 rounded-xl border border-slate-100">
+            <div>• Primary Source & Treaty Critique</div>
+            <div>• Constitutional Bench Debates</div>
+            <div>• GIS & Cartographic Mapping</div>
+            <div>• Sociological Fieldwork Rubrics</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Class 6 to 10 Middle & Secondary Foundations -->
+  <section id="foundations" class="py-16 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-extrabold uppercase tracking-widest text-brand-blue">Class 6 to 10 Foundations</h2>
+        <p class="text-3xl font-extrabold text-brand-navy mt-2">Core Subject Mastery Before Streaming</p>
+        <p class="text-slate-600 text-sm mt-2">Building the essential conceptual bridge so middle schoolers step into Class 11 without foundational gaps.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200">
+          <span class="font-bold text-brand-navy block mb-1">📐 Mathematics</span>
+          <p class="text-xs text-slate-600">Numbers, Integers, Algebra readiness, Euclidean geometry, Mensuration, and Probability.</p>
+        </div>
+        <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200">
+          <span class="font-bold text-brand-navy block mb-1">🔬 General Science</span>
+          <p class="text-xs text-slate-600">Living organisms, Motion & Forces, Chemical changes, Electricity circuits, and Ecosystems.</p>
+        </div>
+        <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200">
+          <span class="font-bold text-brand-navy block mb-1">🌍 Social Science</span>
+          <p class="text-xs text-slate-600">Indian Civilization, Democratic politics, Physical geography of India, and Development Economics.</p>
+        </div>
+        <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200">
+          <span class="font-bold text-brand-navy block mb-1">✍️ Languages & Pedagogy</span>
+          <p class="text-xs text-slate-600">English, Punjabi (ਪੰਜਾਬੀ), and Hindi communicative competence, critical reading, and creative writing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Multi-Stream Interactive Demonstration Sandbox -->
   <section id="lab" class="py-16 bg-slate-50 border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-10">
-        <h2 class="text-xs font-extrabold uppercase tracking-widest text-brand-blue">Interactive Sandbox</h2>
-        <p class="text-3xl font-extrabold text-brand-navy mt-2">Visual Math Conceptualizer</p>
+        <h2 class="text-xs font-extrabold uppercase tracking-widest text-brand-blue">Interactive Teacher Sandbox</h2>
+        <p class="text-3xl font-extrabold text-brand-navy mt-2">Classroom Simulation Labs</p>
       </div>
 
-      <div class="bg-white border border-slate-200 rounded-2xl p-6 lg:p-8 max-w-3xl mx-auto shadow-sm">
-        <div class="flex gap-2 mb-6 border-b border-slate-100 pb-4">
-          <button onclick="setDomain('binomial')" id="tab-binomial" class="px-4 py-2 rounded-lg text-xs font-bold bg-brand-navy text-white">
-            Binomial Area Model
+      <div class="bg-white border border-slate-200 rounded-3xl p-6 lg:p-8 max-w-4xl mx-auto shadow-sm">
+        
+        <!-- Lab Tabs -->
+        <div class="flex flex-wrap gap-2 mb-6 border-b border-slate-100 pb-4">
+          <button onclick="setStreamTab('science')" id="tab-science" class="px-4 py-2 rounded-lg text-xs font-bold bg-brand-navy text-white transition">
+            🔬 Med & Non-Med (Vector Resultant)
           </button>
-          <button onclick="setDomain('integers')" id="tab-integers" class="px-4 py-2 rounded-lg text-xs font-bold bg-slate-100 text-slate-700">
-            Integer Counters
+          <button onclick="setStreamTab('commerce')" id="tab-commerce" class="px-4 py-2 rounded-lg text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">
+            📊 Commerce (Accounting Equation)
+          </button>
+          <button onclick="setStreamTab('arts')" id="tab-arts" class="px-4 py-2 rounded-lg text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">
+            🏛️ Arts / Humanities (Policy Analysis)
           </button>
         </div>
 
-        <div id="sandbox-binomial" class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <!-- 1. Science/Math Sandbox (Vectors) -->
+        <div id="sandbox-science" class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           <div class="space-y-4">
             <div>
-              <label class="text-xs font-bold text-slate-600 block mb-1">Dimension a: <span id="val-a" class="text-brand-blue font-bold">4</span></label>
-              <input type="range" min="2" max="6" value="4" id="range-a" oninput="updateBinomial()" class="w-full">
+              <label class="text-xs font-bold text-slate-600 block mb-1">Vector X Force (N): <span id="val-vx" class="text-brand-blue font-bold">40</span></label>
+              <input type="range" min="10" max="80" value="40" id="range-vx" oninput="updateVectorLab()" class="w-full">
             </div>
             <div>
-              <label class="text-xs font-bold text-slate-600 block mb-1">Dimension b: <span id="val-b" class="text-brand-pencilOrange font-bold">3</span></label>
-              <input type="range" min="1" max="5" value="3" id="range-b" oninput="updateBinomial()" class="w-full">
+              <label class="text-xs font-bold text-slate-600 block mb-1">Vector Y Force (N): <span id="val-vy" class="text-brand-pencilOrange font-bold">30</span></label>
+              <input type="range" min="10" max="80" value="30" id="range-vy" oninput="updateVectorLab()" class="w-full">
             </div>
             <div class="p-3 bg-slate-50 rounded-lg text-xs">
-              <span class="font-bold text-slate-700 block mb-1">Formula Calculation:</span>
-              <p class="mono text-brand-navy font-bold">(a + b)² = a² + 2ab + b²</p>
-              <p id="binomial-calc" class="mono text-slate-600 mt-1">(4 + 3)² = 16 + 24 + 9 = 49</p>
+              <span class="font-bold text-slate-700 block mb-1">Physics Mechanics Proof:</span>
+              <p class="mono text-brand-navy font-bold">R = √(Fx² + Fy²)</p>
+              <p id="vector-calc" class="mono text-slate-600 mt-1">R = √(40² + 30²) = 50.0 N</p>
             </div>
           </div>
-          <div class="flex justify-center items-center bg-slate-50 rounded-xl p-6 min-h-[220px]">
-            <div id="binomial-visual" class="grid grid-cols-2 gap-1.5 p-2 bg-white rounded border border-slate-200"></div>
+          <div class="flex flex-col justify-center items-center bg-slate-50 rounded-xl p-6 min-h-[220px]">
+            <svg id="vector-svg" viewBox="0 0 200 200" class="w-48 h-48 bg-white border border-slate-200 rounded-lg">
+              <line x1="20" y1="180" x2="140" y2="180" stroke="#00A6FB" stroke-width="4" marker-end="url(#arrow)" />
+              <line x1="140" y1="180" x2="140" y2="80" stroke="#F27059" stroke-width="4" marker-end="url(#arrow)" />
+              <line x1="20" y1="180" x2="140" y2="80" stroke="#0B2545" stroke-width="3" stroke-dasharray="4" />
+            </svg>
+            <span class="text-[10px] text-slate-400 mt-2">Class 11 Physics & Higher Math Kinematics</span>
           </div>
         </div>
 
-        <div id="sandbox-integers" class="hidden grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <!-- 2. Commerce Sandbox (Accounting Balance Equation) -->
+        <div id="sandbox-commerce" class="hidden grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           <div class="space-y-4">
             <div>
-              <label class="text-xs font-bold text-slate-600 block mb-1">Positive (+) Counters: <span id="val-pos" class="text-emerald-600 font-bold">5</span></label>
-              <input type="range" min="0" max="8" value="5" id="range-pos" oninput="updateIntegers()" class="w-full">
+              <label class="text-xs font-bold text-slate-600 block mb-1">Liabilities (₹ Lakhs): <span id="val-liab" class="text-rose-600 font-bold">30</span></label>
+              <input type="range" min="5" max="50" value="30" id="range-liab" oninput="updateCommerceLab()" class="w-full">
             </div>
             <div>
-              <label class="text-xs font-bold text-slate-600 block mb-1">Negative (−) Counters: <span id="val-neg" class="text-rose-600 font-bold">3</span></label>
-              <input type="range" min="0" max="8" value="3" id="range-neg" oninput="updateIntegers()" class="w-full">
+              <label class="text-xs font-bold text-slate-600 block mb-1">Owner's Capital / Equity (₹ Lakhs): <span id="val-equity" class="text-emerald-600 font-bold">45</span></label>
+              <input type="range" min="10" max="70" value="45" id="range-equity" oninput="updateCommerceLab()" class="w-full">
             </div>
             <div class="p-3 bg-slate-50 rounded-lg text-xs">
-              <span class="font-bold text-slate-700 block mb-1">Net Arithmetic Result:</span>
-              <p id="integer-calc" class="mono font-bold text-brand-navy">(+5) + (-3) = +2</p>
+              <span class="font-bold text-slate-700 block mb-1">Core Accounting Equation:</span>
+              <p class="mono text-brand-navy font-bold text-sm">Total Assets = Liabilities + Capital</p>
+              <p id="commerce-calc" class="mono text-slate-600 mt-1">₹75 Lakhs = ₹30 Lakhs + ₹45 Lakhs</p>
             </div>
           </div>
-          <div class="flex justify-center items-center bg-slate-50 rounded-xl p-6 min-h-[220px]">
-            <div id="counters-container" class="flex flex-wrap gap-2 justify-center max-w-xs"></div>
+          <div class="flex flex-col justify-center items-center bg-slate-50 rounded-xl p-6 min-h-[220px]">
+            <div class="w-full max-w-xs space-y-2">
+              <div class="text-[11px] font-bold text-slate-500">Asset Balance Gauge</div>
+              <div class="w-full bg-slate-200 h-6 rounded-full overflow-hidden flex shadow-inner">
+                <div id="bar-liab" style="width: 40%;" class="bg-rose-500 h-full flex items-center justify-center text-[10px] text-white font-bold">Liabilities</div>
+                <div id="bar-equity" style="width: 60%;" class="bg-emerald-500 h-full flex items-center justify-center text-[10px] text-white font-bold">Equity</div>
+              </div>
+              <p class="text-[11px] text-slate-500 text-center pt-2">Class 11 Accountancy Fundamental Framework</p>
+            </div>
           </div>
         </div>
+
+        <!-- 3. Arts / Humanities Sandbox -->
+        <div id="sandbox-arts" class="hidden space-y-4">
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+            <span class="text-xs font-bold text-purple-900 uppercase block mb-1">Class 11-12 Political Science & History Inquiry</span>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              Equip senior secondary students with historiographical and public policy evaluation frameworks used in competitive university admissions.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+            <div class="p-3 bg-white border border-slate-200 rounded-xl">
+              <h4 class="font-bold text-brand-navy mb-1">1. Constitutional Intent</h4>
+              <p class="text-slate-500">Analyze Constituent Assembly debates to explain Supreme Court basic structure rulings.</p>
+            </div>
+            <div class="p-3 bg-white border border-slate-200 rounded-xl">
+              <h4 class="font-bold text-brand-navy mb-1">2. Economic History</h4>
+              <p class="text-slate-500">Trace Green Revolution impacts specifically across Punjab's regional geography.</p>
+            </div>
+            <div class="p-3 bg-white border border-slate-200 rounded-xl">
+              <h4 class="font-bold text-brand-navy mb-1">3. Historiography</h4>
+              <p class="text-slate-500">Compare colonial administrative gazettes with regional vernacular accounts.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Punjab Curriculum Tracks -->
+  <!-- Board Alignment (CBSE, PSEB, ICSE/ISC) -->
   <section id="curriculum" class="py-16 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-10">
-        <h2 class="text-xs font-extrabold uppercase tracking-widest text-brand-blue">Curriculum Alignment</h2>
-        <p class="text-3xl font-extrabold text-brand-navy mt-2">Tailored for Ludhiana Classrooms</p>
+        <h2 class="text-xs font-extrabold uppercase tracking-widest text-brand-blue">Board Curriculum Alignment</h2>
+        <p class="text-3xl font-extrabold text-brand-navy mt-2">Tailored for Ludhiana School Boards</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="p-6 border border-slate-200 rounded-2xl bg-slate-50">
           <span class="text-xs font-bold text-brand-blue uppercase">Central Board</span>
-          <h3 class="text-lg font-bold text-brand-navy mt-1">CBSE Competency Framework</h3>
-          <p class="text-xs text-slate-600 mt-2">NEP 2020-aligned case studies, visual algebra modeling, and assertions for Classes 6 through 10.</p>
+          <h3 class="text-lg font-bold text-brand-navy mt-1">CBSE Classes 6 to 12</h3>
+          <p class="text-xs text-slate-600 mt-2">Full compliance with NEP 2020 competency questions, assertion-reason modules, and stream-wise practicals.</p>
         </div>
         <div class="p-6 border-2 border-brand-cyan rounded-2xl bg-cyan-50/20">
-          <span class="text-xs font-bold text-brand-cyan uppercase">Punjab Board</span>
-          <h3 class="text-lg font-bold text-brand-navy mt-1">PSEB Bilingual Pedagogy</h3>
-          <p class="text-xs text-slate-600 mt-2">Resources crafted for delivering conceptual math in English & Punjabi (ਪੰਜਾਬੀ) for state affiliated schools.</p>
+          <span class="text-xs font-bold text-brand-cyan uppercase">Punjab State Board</span>
+          <h3 class="text-lg font-bold text-brand-navy mt-1">PSEB Bilingual Class 6-12</h3>
+          <p class="text-xs text-slate-600 mt-2">Delivering Science, Math, Commerce, and Arts in English & Punjabi (ਪੰਜਾਬੀ), bridging technical terminology seamlessly.</p>
         </div>
         <div class="p-6 border border-slate-200 rounded-2xl bg-slate-50">
-          <span class="text-xs font-bold text-brand-pencilOrange uppercase">ICSE & Foundations</span>
-          <h3 class="text-lg font-bold text-brand-navy mt-1">Rigorous Proofs & NTSE</h3>
-          <p class="text-xs text-slate-600 mt-2">Geometry proofs, commercial mathematics, and Olympiad problem-solving tracks.</p>
+          <span class="text-xs font-bold text-brand-pencilOrange uppercase">Council for ISC</span>
+          <h3 class="text-lg font-bold text-brand-navy mt-1">ICSE & ISC Mastery</h3>
+          <p class="text-xs text-slate-600 mt-2">In-depth laboratory research writeups, advanced English literature textual criticism, and competitive proofs.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Ludhiana On-Campus Workshops -->
+  <!-- Ludhiana On-Campus Faculty Workshops -->
   <section id="workshops" class="py-16 bg-brand-navy text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         <div class="lg:col-span-7 space-y-4">
-          <span class="text-xs font-bold text-brand-cyan uppercase tracking-wider">Faculty Development</span>
-          <h2 class="text-3xl font-extrabold">Book a Faculty Workshop at Your Ludhiana School</h2>
+          <span class="text-xs font-bold text-brand-cyan uppercase tracking-wider">Faculty Development Programs (FDP)</span>
+          <h2 class="text-3xl font-extrabold">Book Stream-Wise Training at Your Ludhiana Campus</h2>
           <p class="text-sm text-slate-300 max-w-xl">
-            We deliver in-person teacher workshops in Sarabha Nagar, Civil Lines, BRS Nagar, Model Town, and across Ludhiana.
+            We conduct customized on-site workshops for Middle School (6-8), Secondary (9-10), and Senior Secondary (11-12) faculties across Sarabha Nagar, Civil Lines, BRS Nagar, Model Town, and the greater Ludhiana region.
           </p>
+          <div class="flex flex-wrap gap-2 text-xs pt-2">
+            <span class="bg-white/10 px-3 py-1 rounded-lg">🩺 Medical Department</span>
+            <span class="bg-white/10 px-3 py-1 rounded-lg">⚙️ Non-Med Department</span>
+            <span class="bg-white/10 px-3 py-1 rounded-lg">📊 Commerce Department</span>
+            <span class="bg-white/10 px-3 py-1 rounded-lg">🏛️ Arts Department</span>
+          </div>
         </div>
+
         <div class="lg:col-span-5 bg-white text-slate-800 rounded-2xl p-6 shadow-xl">
-          <h3 class="text-base font-bold text-brand-navy mb-1">Request School Training Session</h3>
-          <p class="text-xs text-slate-500 mb-4">Our Ludhiana team will respond within 24 hours.</p>
-          <form onsubmit="event.preventDefault(); alert('Request submitted! Our Ludhiana coordinator will call you shortly.');" class="space-y-3">
+          <h3 class="text-base font-bold text-brand-navy mb-1">Request School Faculty Training</h3>
+          <p class="text-xs text-slate-500 mb-4">Our Ludhiana academic coordinator will respond within 24 hours.</p>
+          <form onsubmit="event.preventDefault(); alert('Request submitted! Our Ludhiana team will get in touch with your school coordinator.');" class="space-y-3">
             <input type="text" placeholder="School Name" required class="w-full text-xs px-3 py-2 border border-slate-200 rounded-lg">
             <input type="tel" placeholder="Principal / Coordinator Mobile" required class="w-full text-xs px-3 py-2 border border-slate-200 rounded-lg">
             <select class="w-full text-xs px-3 py-2 border border-slate-200 rounded-lg">
-              <option>CBSE Affiliated</option>
-              <option>PSEB Affiliated</option>
-              <option>ICSE / Other</option>
+              <option>All Streams (Classes 6-12 Comprehensive)</option>
+              <option>Senior Secondary Med & Non-Med (Science)</option>
+              <option>Senior Secondary Commerce & Economics</option>
+              <option>Senior Secondary Arts & Humanities</option>
+              <option>Middle & Secondary Foundation (Classes 6-10)</option>
             </select>
             <button type="submit" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-bold text-xs py-2.5 rounded-lg transition">
-              Submit Workshop Request
+              Submit Workshop Consultation
             </button>
           </form>
         </div>
@@ -293,111 +503,149 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-slate-900 text-white py-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-400 space-y-2">
-      <p class="font-bold text-white text-base">Num<span class="text-brand-blue">IQ</span> Ludhiana</p>
-      <p>Dedicated to math educators across Ludhiana & Punjab.</p>
-      <p class="pt-2 text-slate-500">© 2026 NumIQ. All rights reserved.</p>
+  <footer class="bg-slate-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-xs">
+        <div class="md:col-span-2 space-y-3">
+          <span class="text-xl font-black tracking-tight text-white">Num<span class="text-brand-blue">IQ</span> Ludhiana</span>
+          <p class="text-slate-400 max-w-sm">
+            The premier pedagogical innovation and faculty development network across Ludhiana & Punjab — supporting educators from Class 6 foundations through Class 12 Senior Secondary streams.
+          </p>
+          <p class="text-[11px] text-slate-500">
+            Office: Civil Lines / Ferozepur Road, Ludhiana, Punjab 141001
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-brand-cyan mb-2">Class 11-12 Streams</h4>
+          <ul class="space-y-1.5 text-slate-300">
+            <li><a href="#streams" class="hover:text-white">Medical Stream (PCB)</a></li>
+            <li><a href="#streams" class="hover:text-white">Non-Medical Stream (PCM)</a></li>
+            <li><a href="#streams" class="hover:text-white">Commerce & Economics</a></li>
+            <li><a href="#streams" class="hover:text-white">Humanities / Arts Stream</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-brand-cyan mb-2">Connect</h4>
+          <ul class="space-y-1.5 text-slate-300">
+            <li>Email: ludhiana@numiq.in</li>
+            <li>Helpline: +91 98XXX XXXXX</li>
+            <li>Mon - Sat: 9:00 AM - 6:00 PM IST</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-800 pt-6 text-center text-[11px] text-slate-500">
+        © 2026 NumIQ Education Hub. Dedicated to educators across Ludhiana & Punjab.
+      </div>
     </div>
   </footer>
 
   <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/919876543210?text=Hello%20NumIQ%20Ludhiana!" 
+  <a href="https://wa.me/919876543210?text=Hello%20NumIQ%20Ludhiana!%20I%20am%20interested%20in%20Classes%206-12%20faculty%20training." 
      target="_blank" 
      class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-3.5 rounded-full shadow-lg flex items-center gap-2 hover:scale-105 transition"
-     title="WhatsApp Ludhiana Coordinator">
+     title="Chat with Ludhiana Desk on WhatsApp">
     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.288.043.088.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
     <span class="hidden sm:inline text-xs font-bold pr-1">Ludhiana Desk</span>
   </a>
 
   <!-- Script Logic -->
   <script>
-    const punjabTips = [
-      "When introducing negative integers to Class 6, use local temperature drops or shop ledger credits/debits (ਜਮ੍ਹਾਂ/ਖਰਚ) before formal minus signs.",
-      "For Class 9 Circles, have students bring actual round Punjabi utensils (thali, katori) to measure Circumference ÷ Diameter before introducing π (pi).",
-      "Connect algebraic variables (x, y) to unknown sacks of wheat in a grain market to make equations intuitive."
+    // Stream-wise pedagogy tips
+    const streamTips = [
+      { badge: "Medical Stream (Bio/Chem) Tip:", text: "In Genetics and Biomolecules, teach students to sketch metabolic cascades and Punnett squares before rote-memorizing enzyme nomenclatures." },
+      { badge: "Non-Medical Stream (PCM) Tip:", text: "For Class 12 Calculus and Vectors, visually demonstrate how derivatives represent instantaneous rates of change in kinematics before formulas." },
+      { badge: "Commerce Stream Tip:", text: "When teaching Accountancy balance sheets, simulate transactions using real Punjab manufacturing firms (hosiery/auto parts) balance reports." },
+      { badge: "Arts / Humanities Stream Tip:", text: "In Political Science, organize structured mock parliamentary sessions on constitutional amendments rather than passive chapter reading." }
     ];
 
+    // Multi-stream bilingual vocabulary
     const terms = [
-      { eng: "Fraction", pbi: "ਭਿੰਨ (Bhinn)", ex: "3/4 is 3 parts out of 4" },
-      { eng: "Linear Equation", pbi: "ਸਮੀਕਰਨ (Sameekaran)", ex: "2x + 3 = 7" },
-      { eng: "Area", pbi: "ਖੇਤਰਫਲ (Khetarfal)", ex: "Space covered inside the boundary" }
+      { eng: "Photosynthesis (Medical)", pbi: "ਪ੍ਰਕਾਸ਼ ਸੰਸਲੇਸ਼ਣ (Prakash Sanslesharn)", ex: "Cellular energy synthesis" },
+      { eng: "Integration / Calculus (Non-Med)", pbi: "ਸਮਾਕਲਨ (Samakalan)", ex: "Summation under continuous curves" },
+      { eng: "Capital & Liability (Commerce)", pbi: "ਪੂੰਜੀ ਅਤੇ ਦੇਣਦਾਰੀਆਂ (Poonji te Deendariyan)", ex: "Financial obligation & equity balance" },
+      { eng: "Democracy & Constitution (Arts)", pbi: "ਲੋਕਤੰਤਰ ਅਤੇ ਸੰਵਿਧਾਨ", ex: "Rule of law and citizen rights" }
     ];
 
-    let tIdx = 0;
+    let tipIdx = 0;
     let termIdx = 0;
 
-    function newPedagogyTip() {
-      tIdx = (tIdx + 1) % punjabTips.length;
-      document.getElementById('daily-tip').innerText = `"${punjabTips[tIdx]}"`;
+    function newStreamTip() {
+      tipIdx = (tipIdx + 1) % streamTips.length;
+      document.getElementById('tip-stream-badge').innerText = streamTips[tipIdx].badge;
+      document.getElementById('daily-tip').innerText = `"${streamTips[tipIdx].text}"`;
     }
 
     function switchBilingualTerm() {
       const item = terms[termIdx];
-      document.getElementById('daily-tip').innerHTML = `<strong>Bilingual Vocab:</strong> ${item.eng} = <span class="text-amber-800 font-bold">${item.pbi}</span><br><span class="text-[11px] text-slate-500">${item.ex}</span>`;
+      document.getElementById('tip-stream-badge').innerText = "Stream Bilingual Bridge:";
+      document.getElementById('daily-tip').innerHTML = `<strong>${item.eng}:</strong> <span class="text-amber-800 font-bold">${item.pbi}</span><br><span class="text-[11px] text-slate-500">${item.ex}</span>`;
       termIdx = (termIdx + 1) % terms.length;
     }
 
-    function setDomain(domain) {
-      const bBox = document.getElementById('sandbox-binomial');
-      const iBox = document.getElementById('sandbox-integers');
-      const tabB = document.getElementById('tab-binomial');
-      const tabI = document.getElementById('tab-integers');
+    // Stream sandbox switcher
+    function setStreamTab(tab) {
+      const sciBox = document.getElementById('sandbox-science');
+      const comBox = document.getElementById('sandbox-commerce');
+      const artsBox = document.getElementById('sandbox-arts');
 
-      if (domain === 'binomial') {
-        bBox.classList.remove('hidden');
-        iBox.classList.add('hidden');
-        tabB.className = "px-4 py-2 rounded-lg text-xs font-bold bg-brand-navy text-white";
-        tabI.className = "px-4 py-2 rounded-lg text-xs font-bold bg-slate-100 text-slate-700";
+      const btnSci = document.getElementById('tab-science');
+      const btnCom = document.getElementById('tab-commerce');
+      const btnArts = document.getElementById('tab-arts');
+
+      sciBox.classList.add('hidden');
+      comBox.classList.add('hidden');
+      artsBox.classList.add('hidden');
+
+      btnSci.className = "px-4 py-2 rounded-lg text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition";
+      btnCom.className = "px-4 py-2 rounded-lg text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition";
+      btnArts.className = "px-4 py-2 rounded-lg text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition";
+
+      if (tab === 'science') {
+        sciBox.classList.remove('hidden');
+        btnSci.className = "px-4 py-2 rounded-lg text-xs font-bold bg-brand-navy text-white transition";
+        updateVectorLab();
+      } else if (tab === 'commerce') {
+        comBox.classList.remove('hidden');
+        btnCom.className = "px-4 py-2 rounded-lg text-xs font-bold bg-brand-navy text-white transition";
+        updateCommerceLab();
       } else {
-        bBox.classList.add('hidden');
-        iBox.classList.remove('hidden');
-        tabI.className = "px-4 py-2 rounded-lg text-xs font-bold bg-brand-navy text-white";
-        tabB.className = "px-4 py-2 rounded-lg text-xs font-bold bg-slate-100 text-slate-700";
-        updateIntegers();
+        artsBox.classList.remove('hidden');
+        btnArts.className = "px-4 py-2 rounded-lg text-xs font-bold bg-brand-navy text-white transition";
       }
     }
 
-    function updateBinomial() {
-      const a = parseInt(document.getElementById('range-a').value);
-      const b = parseInt(document.getElementById('range-b').value);
-      document.getElementById('val-a').innerText = a;
-      document.getElementById('val-b').innerText = b;
+    // Vector calculation
+    function updateVectorLab() {
+      const vx = parseInt(document.getElementById('range-vx').value);
+      const vy = parseInt(document.getElementById('range-vy').value);
+      document.getElementById('val-vx').innerText = vx;
+      document.getElementById('val-vy').innerText = vy;
 
-      const a2 = a * a;
-      const ab2 = 2 * a * b;
-      const b2 = b * b;
-      document.getElementById('binomial-calc').innerText = `(${a} + ${b})² = ${a2} + ${ab2} + ${b2} = ${a2 + ab2 + b2}`;
-
-      const container = document.getElementById('binomial-visual');
-      container.innerHTML = `
-        <div style="width: ${a*22}px; height: ${a*22}px;" class="bg-blue-100 border border-blue-400 flex items-center justify-center text-xs font-bold text-blue-900 rounded">a²</div>
-        <div style="width: ${b*22}px; height: ${a*22}px;" class="bg-amber-100 border border-amber-400 flex items-center justify-center text-xs font-bold text-amber-900 rounded">ab</div>
-        <div style="width: ${a*22}px; height: ${b*22}px;" class="bg-amber-100 border border-amber-400 flex items-center justify-center text-xs font-bold text-amber-900 rounded">ab</div>
-        <div style="width: ${b*22}px; height: ${b*22}px;" class="bg-orange-100 border border-orange-400 flex items-center justify-center text-xs font-bold text-orange-900 rounded">b²</div>
-      `;
+      const resultant = Math.sqrt(vx * vx + vy * vy).toFixed(1);
+      document.getElementById('vector-calc').innerText = `R = √(${vx}² + ${vy}²) = ${resultant} N`;
     }
 
-    function updateIntegers() {
-      const pos = parseInt(document.getElementById('range-pos').value);
-      const neg = parseInt(document.getElementById('range-neg').value);
-      document.getElementById('val-pos').innerText = pos;
-      document.getElementById('val-neg').innerText = neg;
-      const net = pos - neg;
-      document.getElementById('integer-calc').innerText = `(+${pos}) + (-${neg}) = ${net >= 0 ? '+' : ''}${net}`;
+    // Commerce equation calculation
+    function updateCommerceLab() {
+      const liab = parseInt(document.getElementById('range-liab').value);
+      const equity = parseInt(document.getElementById('range-equity').value);
+      document.getElementById('val-liab').innerText = liab;
+      document.getElementById('val-equity').innerText = equity;
 
-      const container = document.getElementById('counters-container');
-      container.innerHTML = '';
-      for (let i = 0; i < pos; i++) {
-        container.innerHTML += `<div class="w-7 h-7 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold text-xs">+</div>`;
-      }
-      for (let j = 0; j < neg; j++) {
-        container.innerHTML += `<div class="w-7 h-7 rounded-full bg-rose-500 text-white flex items-center justify-center font-bold text-xs">−</div>`;
-      }
+      const totalAssets = liab + equity;
+      document.getElementById('commerce-calc').innerText = `₹${totalAssets} Lakhs = ₹${liab} Lakhs + ₹${equity} Lakhs`;
+
+      const liabPercent = (liab / totalAssets) * 100;
+      const eqPercent = (equity / totalAssets) * 100;
+      document.getElementById('bar-liab').style.width = liabPercent + '%';
+      document.getElementById('bar-equity').style.width = eqPercent + '%';
     }
 
     window.addEventListener('DOMContentLoaded', () => {
-      updateBinomial();
+      updateVectorLab();
     });
   </script>
 </body>
