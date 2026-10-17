@@ -5,40 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NumIQ | Premier Math Teacher Pedagogy & Training Hub in Ludhiana</title>
   <meta name="description" content="Empowering math educators across Ludhiana & Punjab with modern CRA pedagogy, CBSE, ICSE & PSEB curriculum frameworks, and interactive teaching tools.">
-  <meta name="keywords" content="Math Teacher Training Ludhiana, PSEB Math Pedagogy, CBSE Math Workshops Punjab, Faculty Development Program Ludhiana, NumIQ">
-  <link rel="canonical" href="https://numiq-website.vercel.app/">
-
-  <!-- Open Graph / Local Meta -->
-  <meta property="og:title" content="NumIQ | Premier Math Teacher Training Hub in Ludhiana">
-  <meta property="og:description" content="Transforming conceptual math teaching across CBSE, ICSE, and PSEB schools in Ludhiana and Punjab.">
-  <meta property="og:type" content="website">
-
-  <!-- Local Educational Organization Schema (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "NumIQ",
-    "url": "https://numiq-website.vercel.app/",
-    "logo": "https://numiq-website.vercel.app/logo.png",
-    "description": "Leading math educator training, faculty development programs, and pedagogical laboratory in Ludhiana, Punjab.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Ludhiana",
-      "addressRegion": "Punjab",
-      "postalCode": "141001",
-      "addressCountry": "IN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "30.9010",
-      "longitude": "75.8573"
-    },
-    "areaServed": ["Ludhiana", "Jalandhar", "Amritsar", "Chandigarh", "Punjab"]
-  }
-  </script>
-
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -51,8 +17,7 @@
               blue: '#00A6FB',
               cyan: '#05B2D2',
               pencilWood: '#F7B267',
-              pencilOrange: '#F27059',
-              lightBg: '#F8FAFC'
+              pencilOrange: '#F27059'
             }
           }
         }
@@ -63,21 +28,17 @@
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
     .mono { font-family: 'JetBrains Mono', monospace; }
-    @keyframes floatSlow {
+    @keyframes floatMascot {
       0%, 100% { transform: translateY(0px) rotate(0deg); }
       50% { transform: translateY(-8px) rotate(1.5deg); }
     }
-    .animate-mascot { animation: floatSlow 4s ease-in-out infinite; }
-    .punjab-pill {
-      background: linear-gradient(135deg, #FFF1E6 0%, #FFE2D1 100%);
-      border: 1px solid #FCD3B0;
-    }
+    .animate-mascot { animation: floatMascot 4s ease-in-out infinite; }
   </style>
 </head>
-<body class="bg-[#F8FAFC] text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen">
 
-  <!-- Top Announcement Bar for Ludhiana -->
-  <div class="bg-brand-navy text-white text-xs sm:text-sm py-2 px-4 text-center font-medium border-b border-brand-dark/50">
+  <!-- Top Announcement Bar -->
+  <div class="bg-brand-navy text-white text-xs sm:text-sm py-2 px-4 text-center font-medium">
     <div class="max-w-7xl mx-auto flex items-center justify-center gap-2">
       <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
       <span>Now booking <strong>In-Person Math Faculty Workshops</strong> across Ludhiana schools (CBSE, ICSE & PSEB).</span>
@@ -85,21 +46,21 @@
     </div>
   </div>
 
-  <!-- Navigation -->
-  <header class="bg-white/95 backdrop-blur-md sticky top-0 z-40 border-b border-slate-100">
+  <!-- Navigation Bar -->
+  <header class="bg-white sticky top-0 z-40 border-b border-slate-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <!-- Brand Infinity Pencil Vector SVG -->
+        <!-- Logo SVG -->
         <div class="w-12 h-12 flex-shrink-0 cursor-pointer" onclick="window.scrollTo({top:0, behavior:'smooth'})">
           <svg viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-sm">
             <path d="M 120,40 C 60,40 20,80 20,120 C 20,160 60,190 110,190 C 170,190 220,130 270,70 C 310,25 370,30 380,85 C 390,140 330,180 270,180 C 220,180 185,150 160,120" stroke="#0B2545" stroke-width="32" stroke-linecap="round"/>
-            <path d="M 120,40 C 60,40 20,80 20,120 C 20,160 60,190 110,190 C 150,190 185,160 215,130" stroke="url(#paint0_linear)" stroke-width="32" stroke-linecap="round"/>
+            <path d="M 120,40 C 60,40 20,80 20,120 C 20,160 60,190 110,190 C 150,190 185,160 215,130" stroke="url(#paint0_nav)" stroke-width="32" stroke-linecap="round"/>
             <path d="M 215,130 L 270,75 L 300,105 L 245,160 Z" fill="#00A6FB"/>
             <polygon points="270,75 300,105 325,80" fill="#F7B267"/>
             <polygon points="300,105 325,80 320,70" fill="#F27059"/>
             <polygon points="315,75 325,80 340,65" fill="#0B2545"/>
             <defs>
-              <linearGradient id="paint0_linear" x1="20" y1="120" x2="220" y2="130" gradientUnits="userSpaceOnUse">
+              <linearGradient id="paint0_nav" x1="20" y1="120" x2="220" y2="130" gradientUnits="userSpaceOnUse">
                 <stop stop-color="#00C2CB"/>
                 <stop offset="1" stop-color="#00A6FB"/>
               </linearGradient>
@@ -107,7 +68,7 @@
           </svg>
         </div>
         <div>
-          <span class="text-2xl font-black tracking-tight text-brand-navy flex items-center gap-1">
+          <span class="text-2xl font-black tracking-tight text-brand-navy flex items-center">
             Num<span class="text-brand-blue">IQ</span>
           </span>
           <span class="text-[10px] tracking-wider uppercase font-bold text-slate-400 block -mt-1">Ludhiana Pedagogy Hub</span>
@@ -122,10 +83,7 @@
       </nav>
 
       <div class="flex items-center gap-3">
-        <a href="#contact" class="hidden sm:inline-flex text-xs font-bold text-brand-navy bg-slate-100 hover:bg-slate-200 px-4 py-2.5 rounded-lg transition">
-          Call: +91 98XXX XXXXX
-        </a>
-        <a href="#workshops" class="bg-brand-blue hover:bg-brand-dark text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-lg shadow-sm shadow-brand-blue/30 transition">
+        <a href="#workshops" class="bg-brand-blue hover:bg-brand-dark text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-lg shadow-sm transition">
           Book School Demo
         </a>
       </div>
@@ -133,5 +91,314 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="relative overflow-hidden pt-12 pb-20 bg-gradient-to-b from-white via-slate-50 to-[#F8FAFC]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg
+  <section class="py-16 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 bg-amber-100 border border-amber-300 px-3.5 py-1.5 rounded-full text-xs font-bold text-amber-900">
+            <span>📍 Ludhiana’s First Specialized Math Pedagogy Initiative</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-brand-navy leading-tight">
+            Empowering Math Teachers to Build <span class="text-brand-blue">Fearless Thinkers</span>.
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
+            NumIQ equips teachers across <strong>Ludhiana & Punjab</strong> with the Concrete-Representational-Abstract (CRA) framework, inquiry lesson plans, and classroom tools aligned directly with <strong>CBSE, ICSE, and PSEB</strong> standards.
+          </p>
+
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="#lab" class="bg-brand-navy hover:bg-brand-dark text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-md transition">
+              Try Interactive Math Lab &rarr;
+            </a>
+            <a href="#workshops" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-sm px-6 py-3.5 rounded-xl transition">
+              Schedule Faculty Training
+            </a>
+          </div>
+
+          <div class="pt-4 flex flex-wrap items-center gap-6 text-xs text-slate-500 font-semibold">
+            <span><strong class="text-brand-navy font-extrabold">CBSE</strong> Aligned</span>
+            <span><strong class="text-brand-navy font-extrabold">PSEB</strong> Bilingual Ready</span>
+            <span><strong class="text-brand-navy font-extrabold">ICSE</strong> Mastery</span>
+            <span><strong class="text-brand-navy font-extrabold">Olympiad</strong> Foundations</span>
+          </div>
+        </div>
+
+        <!-- Mascot & Tip Box -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 shadow-lg max-w-md w-full text-center">
+            <div class="w-48 h-48 mx-auto animate-mascot">
+              <svg viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow">
+                <path d="M 120,40 C 60,40 20,80 20,120 C 20,160 60,190 110,190 C 170,190 220,130 270,70 C 310,25 370,30 380,85 C 390,140 330,180 270,180 C 220,180 185,150 160,120" stroke="#0B2545" stroke-width="32" stroke-linecap="round"/>
+                <path d="M 120,40 C 60,40 20,80 20,120 C 20,160 60,190 110,190 C 150,190 185,160 215,130" stroke="url(#paint0_hero)" stroke-width="32" stroke-linecap="round"/>
+                <path d="M 215,130 L 270,75 L 300,105 L 245,160 Z" fill="#00A6FB"/>
+                <polygon points="270,75 300,105 325,80" fill="#F7B267"/>
+                <polygon points="300,105 325,80 320,70" fill="#F27059"/>
+                <polygon points="315,75 325,80 340,65" fill="#0B2545"/>
+                <circle cx="255" cy="115" r="5" fill="#FFFFFF"/>
+                <defs>
+                  <linearGradient id="paint0_hero" x1="20" y1="120" x2="220" y2="130" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#00C2CB"/>
+                    <stop offset="1" stop-color="#00A6FB"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+
+            <h3 class="text-xl font-bold text-brand-navy mt-4">Meet Numi</h3>
+            <p class="text-xs text-slate-500 font-medium">The Infinite Pencil & Pedagogical Guide</p>
+
+            <div class="mt-4 bg-white border border-slate-200 rounded-xl p-3 text-left">
+              <span class="text-[11px] font-bold text-brand-blue uppercase tracking-wider block mb-1">Punjab Classroom Tip:</span>
+              <p id="daily-tip" class="text-xs text-slate-700 italic">
+                "When introducing negative integers to Class 6, use local temperature drops or shop ledger credits/debits (ਜਮ੍ਹਾਂ/ਖਰਚ) before formal minus signs."
+              </p>
+            </div>
+
+            <div class="mt-4 flex gap-2">
+              <button onclick="newPedagogyTip()" class="flex-1 py-2 text-xs font-bold bg-slate-200 hover:bg-slate-300 text-slate-700 rounded-lg transition">
+                Next Tip
+              </button>
+              <button onclick="switchBilingualTerm()" class="flex-1 py-2 text-xs font-bold bg-amber-100 hover:bg-amber-200 text-amber-900 rounded-lg transition">
+                Toggle Punjabi Term
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Sandbox -->
+  <section id="lab" class="py-16 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <h2 class="text-xs font-extrabold uppercase tracking-widest text-brand-blue">Interactive Sandbox</h2>
+        <p class="text-3xl font-extrabold text-brand-navy mt-2">Visual Math Conceptualizer</p>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 lg:p-8 max-w-3xl mx-auto shadow-sm">
+        <div class="flex gap-2 mb-6 border-b border-slate-100 pb-4">
+          <button onclick="setDomain('binomial')" id="tab-binomial" class="px-4 py-2 rounded-lg text-xs font-bold bg-brand-navy text-white">
+            Binomial Area Model
+          </button>
+          <button onclick="setDomain('integers')" id="tab-integers" class="px-4 py-2 rounded-lg text-xs font-bold bg-slate-100 text-slate-700">
+            Integer Counters
+          </button>
+        </div>
+
+        <div id="sandbox-binomial" class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div class="space-y-4">
+            <div>
+              <label class="text-xs font-bold text-slate-600 block mb-1">Dimension a: <span id="val-a" class="text-brand-blue font-bold">4</span></label>
+              <input type="range" min="2" max="6" value="4" id="range-a" oninput="updateBinomial()" class="w-full">
+            </div>
+            <div>
+              <label class="text-xs font-bold text-slate-600 block mb-1">Dimension b: <span id="val-b" class="text-brand-pencilOrange font-bold">3</span></label>
+              <input type="range" min="1" max="5" value="3" id="range-b" oninput="updateBinomial()" class="w-full">
+            </div>
+            <div class="p-3 bg-slate-50 rounded-lg text-xs">
+              <span class="font-bold text-slate-700 block mb-1">Formula Calculation:</span>
+              <p class="mono text-brand-navy font-bold">(a + b)² = a² + 2ab + b²</p>
+              <p id="binomial-calc" class="mono text-slate-600 mt-1">(4 + 3)² = 16 + 24 + 9 = 49</p>
+            </div>
+          </div>
+          <div class="flex justify-center items-center bg-slate-50 rounded-xl p-6 min-h-[220px]">
+            <div id="binomial-visual" class="grid grid-cols-2 gap-1.5 p-2 bg-white rounded border border-slate-200"></div>
+          </div>
+        </div>
+
+        <div id="sandbox-integers" class="hidden grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div class="space-y-4">
+            <div>
+              <label class="text-xs font-bold text-slate-600 block mb-1">Positive (+) Counters: <span id="val-pos" class="text-emerald-600 font-bold">5</span></label>
+              <input type="range" min="0" max="8" value="5" id="range-pos" oninput="updateIntegers()" class="w-full">
+            </div>
+            <div>
+              <label class="text-xs font-bold text-slate-600 block mb-1">Negative (−) Counters: <span id="val-neg" class="text-rose-600 font-bold">3</span></label>
+              <input type="range" min="0" max="8" value="3" id="range-neg" oninput="updateIntegers()" class="w-full">
+            </div>
+            <div class="p-3 bg-slate-50 rounded-lg text-xs">
+              <span class="font-bold text-slate-700 block mb-1">Net Arithmetic Result:</span>
+              <p id="integer-calc" class="mono font-bold text-brand-navy">(+5) + (-3) = +2</p>
+            </div>
+          </div>
+          <div class="flex justify-center items-center bg-slate-50 rounded-xl p-6 min-h-[220px]">
+            <div id="counters-container" class="flex flex-wrap gap-2 justify-center max-w-xs"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Punjab Curriculum Tracks -->
+  <section id="curriculum" class="py-16 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <h2 class="text-xs font-extrabold uppercase tracking-widest text-brand-blue">Curriculum Alignment</h2>
+        <p class="text-3xl font-extrabold text-brand-navy mt-2">Tailored for Ludhiana Classrooms</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 border border-slate-200 rounded-2xl bg-slate-50">
+          <span class="text-xs font-bold text-brand-blue uppercase">Central Board</span>
+          <h3 class="text-lg font-bold text-brand-navy mt-1">CBSE Competency Framework</h3>
+          <p class="text-xs text-slate-600 mt-2">NEP 2020-aligned case studies, visual algebra modeling, and assertions for Classes 6 through 10.</p>
+        </div>
+        <div class="p-6 border-2 border-brand-cyan rounded-2xl bg-cyan-50/20">
+          <span class="text-xs font-bold text-brand-cyan uppercase">Punjab Board</span>
+          <h3 class="text-lg font-bold text-brand-navy mt-1">PSEB Bilingual Pedagogy</h3>
+          <p class="text-xs text-slate-600 mt-2">Resources crafted for delivering conceptual math in English & Punjabi (ਪੰਜਾਬੀ) for state affiliated schools.</p>
+        </div>
+        <div class="p-6 border border-slate-200 rounded-2xl bg-slate-50">
+          <span class="text-xs font-bold text-brand-pencilOrange uppercase">ICSE & Foundations</span>
+          <h3 class="text-lg font-bold text-brand-navy mt-1">Rigorous Proofs & NTSE</h3>
+          <p class="text-xs text-slate-600 mt-2">Geometry proofs, commercial mathematics, and Olympiad problem-solving tracks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ludhiana On-Campus Workshops -->
+  <section id="workshops" class="py-16 bg-brand-navy text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-4">
+          <span class="text-xs font-bold text-brand-cyan uppercase tracking-wider">Faculty Development</span>
+          <h2 class="text-3xl font-extrabold">Book a Faculty Workshop at Your Ludhiana School</h2>
+          <p class="text-sm text-slate-300 max-w-xl">
+            We deliver in-person teacher workshops in Sarabha Nagar, Civil Lines, BRS Nagar, Model Town, and across Ludhiana.
+          </p>
+        </div>
+        <div class="lg:col-span-5 bg-white text-slate-800 rounded-2xl p-6 shadow-xl">
+          <h3 class="text-base font-bold text-brand-navy mb-1">Request School Training Session</h3>
+          <p class="text-xs text-slate-500 mb-4">Our Ludhiana team will respond within 24 hours.</p>
+          <form onsubmit="event.preventDefault(); alert('Request submitted! Our Ludhiana coordinator will call you shortly.');" class="space-y-3">
+            <input type="text" placeholder="School Name" required class="w-full text-xs px-3 py-2 border border-slate-200 rounded-lg">
+            <input type="tel" placeholder="Principal / Coordinator Mobile" required class="w-full text-xs px-3 py-2 border border-slate-200 rounded-lg">
+            <select class="w-full text-xs px-3 py-2 border border-slate-200 rounded-lg">
+              <option>CBSE Affiliated</option>
+              <option>PSEB Affiliated</option>
+              <option>ICSE / Other</option>
+            </select>
+            <button type="submit" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-bold text-xs py-2.5 rounded-lg transition">
+              Submit Workshop Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-white py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-400 space-y-2">
+      <p class="font-bold text-white text-base">Num<span class="text-brand-blue">IQ</span> Ludhiana</p>
+      <p>Dedicated to math educators across Ludhiana & Punjab.</p>
+      <p class="pt-2 text-slate-500">© 2026 NumIQ. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919876543210?text=Hello%20NumIQ%20Ludhiana!" 
+     target="_blank" 
+     class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-3.5 rounded-full shadow-lg flex items-center gap-2 hover:scale-105 transition"
+     title="WhatsApp Ludhiana Coordinator">
+    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.288.043.088.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
+    <span class="hidden sm:inline text-xs font-bold pr-1">Ludhiana Desk</span>
+  </a>
+
+  <!-- Script Logic -->
+  <script>
+    const punjabTips = [
+      "When introducing negative integers to Class 6, use local temperature drops or shop ledger credits/debits (ਜਮ੍ਹਾਂ/ਖਰਚ) before formal minus signs.",
+      "For Class 9 Circles, have students bring actual round Punjabi utensils (thali, katori) to measure Circumference ÷ Diameter before introducing π (pi).",
+      "Connect algebraic variables (x, y) to unknown sacks of wheat in a grain market to make equations intuitive."
+    ];
+
+    const terms = [
+      { eng: "Fraction", pbi: "ਭਿੰਨ (Bhinn)", ex: "3/4 is 3 parts out of 4" },
+      { eng: "Linear Equation", pbi: "ਸਮੀਕਰਨ (Sameekaran)", ex: "2x + 3 = 7" },
+      { eng: "Area", pbi: "ਖੇਤਰਫਲ (Khetarfal)", ex: "Space covered inside the boundary" }
+    ];
+
+    let tIdx = 0;
+    let termIdx = 0;
+
+    function newPedagogyTip() {
+      tIdx = (tIdx + 1) % punjabTips.length;
+      document.getElementById('daily-tip').innerText = `"${punjabTips[tIdx]}"`;
+    }
+
+    function switchBilingualTerm() {
+      const item = terms[termIdx];
+      document.getElementById('daily-tip').innerHTML = `<strong>Bilingual Vocab:</strong> ${item.eng} = <span class="text-amber-800 font-bold">${item.pbi}</span><br><span class="text-[11px] text-slate-500">${item.ex}</span>`;
+      termIdx = (termIdx + 1) % terms.length;
+    }
+
+    function setDomain(domain) {
+      const bBox = document.getElementById('sandbox-binomial');
+      const iBox = document.getElementById('sandbox-integers');
+      const tabB = document.getElementById('tab-binomial');
+      const tabI = document.getElementById('tab-integers');
+
+      if (domain === 'binomial') {
+        bBox.classList.remove('hidden');
+        iBox.classList.add('hidden');
+        tabB.className = "px-4 py-2 rounded-lg text-xs font-bold bg-brand-navy text-white";
+        tabI.className = "px-4 py-2 rounded-lg text-xs font-bold bg-slate-100 text-slate-700";
+      } else {
+        bBox.classList.add('hidden');
+        iBox.classList.remove('hidden');
+        tabI.className = "px-4 py-2 rounded-lg text-xs font-bold bg-brand-navy text-white";
+        tabB.className = "px-4 py-2 rounded-lg text-xs font-bold bg-slate-100 text-slate-700";
+        updateIntegers();
+      }
+    }
+
+    function updateBinomial() {
+      const a = parseInt(document.getElementById('range-a').value);
+      const b = parseInt(document.getElementById('range-b').value);
+      document.getElementById('val-a').innerText = a;
+      document.getElementById('val-b').innerText = b;
+
+      const a2 = a * a;
+      const ab2 = 2 * a * b;
+      const b2 = b * b;
+      document.getElementById('binomial-calc').innerText = `(${a} + ${b})² = ${a2} + ${ab2} + ${b2} = ${a2 + ab2 + b2}`;
+
+      const container = document.getElementById('binomial-visual');
+      container.innerHTML = `
+        <div style="width: ${a*22}px; height: ${a*22}px;" class="bg-blue-100 border border-blue-400 flex items-center justify-center text-xs font-bold text-blue-900 rounded">a²</div>
+        <div style="width: ${b*22}px; height: ${a*22}px;" class="bg-amber-100 border border-amber-400 flex items-center justify-center text-xs font-bold text-amber-900 rounded">ab</div>
+        <div style="width: ${a*22}px; height: ${b*22}px;" class="bg-amber-100 border border-amber-400 flex items-center justify-center text-xs font-bold text-amber-900 rounded">ab</div>
+        <div style="width: ${b*22}px; height: ${b*22}px;" class="bg-orange-100 border border-orange-400 flex items-center justify-center text-xs font-bold text-orange-900 rounded">b²</div>
+      `;
+    }
+
+    function updateIntegers() {
+      const pos = parseInt(document.getElementById('range-pos').value);
+      const neg = parseInt(document.getElementById('range-neg').value);
+      document.getElementById('val-pos').innerText = pos;
+      document.getElementById('val-neg').innerText = neg;
+      const net = pos - neg;
+      document.getElementById('integer-calc').innerText = `(+${pos}) + (-${neg}) = ${net >= 0 ? '+' : ''}${net}`;
+
+      const container = document.getElementById('counters-container');
+      container.innerHTML = '';
+      for (let i = 0; i < pos; i++) {
+        container.innerHTML += `<div class="w-7 h-7 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold text-xs">+</div>`;
+      }
+      for (let j = 0; j < neg; j++) {
+        container.innerHTML += `<div class="w-7 h-7 rounded-full bg-rose-500 text-white flex items-center justify-center font-bold text-xs">−</div>`;
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      updateBinomial();
+    });
+  </script>
+</body>
+</html>
