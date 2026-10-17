@@ -1,0 +1,1929 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NumIQ | Elevating Math Educators & Pedagogy</title>
+  
+  <!-- Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Phosphor Icons & FontAwesome for education iconography -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Tailwind Custom Config -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0b2545',
+              deep: '#133e6b',
+              sky: '#00a6fb',
+              cyan: '#00c2cb',
+              blue: '#0582ca',
+              amber: '#f79256',
+              coral: '#f3722c',
+              slate: '#1e293b'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            body: ['Inter', 'sans-serif']
+          },
+          animation: {
+            'float-slow': 'float 6s ease-in-out infinite',
+            'pulse-soft': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom gradient meshes and aesthetic accents */
+    .hero-glow {
+      background: radial-gradient(circle at 50% 20%, rgba(0, 166, 251, 0.15) 0%, rgba(11, 37, 69, 0.03) 70%, transparent 100%);
+    }
+    .infinity-gradient {
+      background: linear-gradient(135deg, #0b2545 0%, #0582ca 50%, #00c2cb 100%);
+    }
+    .card-glass {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+    }
+    .pencil-shadow {
+      filter: drop-shadow(0 14px 22px rgba(5, 130, 202, 0.25));
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #94a3b8;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0582ca;
+    }
+  </style>
+</head>
+
+<body class="font-body text-slate-800 bg-[#f8fafc] antialiased selection:bg-brand-sky selection:text-white">
+
+  <!-- ==================== TOP ANNOUNCEMENT BANNER ==================== -->
+  <div class="bg-gradient-to-r from-brand-navy via-brand-deep to-brand-blue text-white px-4 py-2.5 text-xs sm:text-sm font-medium text-center relative z-50 flex items-center justify-center gap-2">
+    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-brand-amber text-white mr-1 shadow-sm">
+      <i class="fa-solid fa-sparkles mr-1.5"></i> Fall Cohort
+    </span>
+    <span>Mastering High-Impact Mathematical Inquiry & AI Lesson Planning: Registration open!</span>
+    <a href="#tracks" class="underline underline-offset-4 font-semibold text-brand-cyan hover:text-white ml-2 transition-colors">Learn more &rarr;</a>
+  </div>
+
+  <!-- ==================== MAIN HEADER / NAVIGATION ==================== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo Branding with Infinity Pencil -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="w-12 h-12 flex-shrink-0 relative transition-transform duration-300 group-hover:scale-105">
+          <!-- Scalable Vector Infinity-Pencil Logo -->
+          <svg viewBox="0 0 240 130" class="w-full h-full drop-shadow-sm" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Left loop (dark navy) -->
+            <path d="M 68 20 C 35 20, 15 42, 15 65 C 15 88, 35 110, 68 110 C 95 110, 115 90, 136 68 C 156 46, 178 20, 204 20 C 230 20, 235 48, 235 65 C 235 84, 215 110, 178 110 C 160 110, 142 98, 130 85" 
+                  stroke="#0b2545" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" />
+            <!-- Cyan gradient flow arc -->
+            <path d="M 40 85 C 22 72, 22 55, 40 40 C 58 25, 90 28, 128 65" 
+                  stroke="url(#cyanGrad)" stroke-width="20" stroke-linecap="round"/>
+            <!-- The Pencil Body sweeping through center to point -->
+            <path d="M 50 100 C 85 106, 120 85, 148 65 L 175 48" 
+                  stroke="#00a6fb" stroke-width="24" stroke-linecap="round"/>
+            <path d="M 58 107 C 90 108, 118 90, 148 65" 
+                  stroke="#0582ca" stroke-width="12" stroke-linecap="round"/>
+            <!-- Pencil Cone / Tip -->
+            <polygon points="170,36 198,42 162,60" fill="#f79256" />
+            <polygon points="175,37 198,42 170,55" fill="#f3722c" />
+            <!-- Pencil Lead Point -->
+            <polygon points="190,40 202,42.5 186,47" fill="#0b2545" />
+            <defs>
+              <linearGradient id="cyanGrad" x1="20" y1="65" x2="140" y2="65" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#00a6fb"/>
+                <stop offset="1" stop-color="#00c2cb"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-2xl font-extrabold tracking-tight text-brand-navy flex items-center leading-none">
+            Num<span class="text-brand-sky">IQ</span>
+            <span class="ml-2 text-[10px] font-bold uppercase tracking-wider bg-sky-100 text-brand-deep px-1.5 py-0.5 rounded">Educator</span>
+          </span>
+          <span class="text-[11px] font-semibold text-slate-400 tracking-wider uppercase mt-1">Pedagogical Mastery</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-600">
+        <a href="#strategy-lab" class="hover:text-brand-sky transition-colors flex items-center gap-1.5">
+          <i class="fa-regular fa-compass text-brand-cyan"></i> Visual Math Lab
+        </a>
+        <a href="#tracks" class="hover:text-brand-sky transition-colors">Courses & Modules</a>
+        <a href="#lesson-generator" class="hover:text-brand-sky transition-colors">Lesson Lab</a>
+        <a href="#community" class="hover:text-brand-sky transition-colors">Teacher Circle</a>
+        <a href="#pricing" class="hover:text-brand-sky transition-colors">School Licensing</a>
+      </nav>
+
+      <!-- Action CTAs -->
+      <div class="flex items-center gap-3">
+        <button onclick="openModal('loginModal')" class="hidden sm:inline-flex text-sm font-bold text-brand-navy hover:text-brand-sky px-4 py-2 transition-colors">
+          Educator Sign In
+        </button>
+        <button onclick="openModal('signupModal')" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-deep to-brand-blue hover:from-brand-navy hover:to-brand-deep text-white text-sm font-bold px-5 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5">
+          <span>Start Free Trial</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </button>
+
+        <!-- Mobile hamburger toggle -->
+        <button id="mobileMenuBtn" class="lg:hidden text-slate-700 hover:text-brand-navy p-2 text-xl" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3">
+      <a href="#strategy-lab" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-sky">Visual Math Lab</a>
+      <a href="#tracks" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-sky">Courses & Tracks</a>
+      <a href="#lesson-generator" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-sky">Lesson Plan Lab</a>
+      <a href="#community" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-sky">Teacher Circle</a>
+      <a href="#pricing" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-sky">School Plans</a>
+      <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+        <button onclick="openModal('loginModal')" class="w-full text-center py-2.5 text-sm font-bold text-brand-navy border border-slate-200 rounded-xl">Educator Sign In</button>
+        <button onclick="openModal('signupModal')" class="w-full text-center py-2.5 text-sm font-bold bg-brand-sky text-white rounded-xl shadow">Get 30 Days Free Access</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-32 overflow-hidden hero-glow">
+    <!-- Subtle Background Math Graphic Elements -->
+    <div class="absolute inset-0 pointer-events-none opacity-5">
+      <div class="absolute top-10 left-12 text-7xl font-mono text-brand-navy">&int; &pi;r&sup2;</div>
+      <div class="absolute top-48 right-16 text-8xl font-mono text-brand-navy">&infin;</div>
+      <div class="absolute bottom-20 left-1/3 text-6xl font-mono text-brand-navy">&radic;x&sup2; + y&sup2;</div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Hero Text Column -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-50 border border-cyan-200 text-brand-deep text-xs sm:text-sm font-semibold shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-brand-cyan animate-ping"></span>
+            <span>Created by Math Specialists for K–12 & AP Educators</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-navy tracking-tight leading-[1.12]">
+            Transform How Students See Math. <br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-sky via-brand-cyan to-brand-deep">
+              Unleash Deep Conceptual Joy.
+            </span>
+          </h1>
+
+          <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            NumIQ equips math teachers with research-backed visual pedagogy, structured inquiry models, and ready-to-teach differentiated activities that eliminate rote anxiety and build infinite mathematical confidence.
+          </p>
+
+          <!-- Dual CTAs and Trust Markers -->
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <button onclick="document.getElementById('strategy-lab').scrollIntoView({behavior: 'smooth'})" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-brand-navy hover:bg-brand-deep text-white font-bold text-base shadow-xl shadow-brand-navy/20 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+              <i class="fa-solid fa-play-circle text-brand-cyan"></i>
+              <span>Try Visual Strategy Lab</span>
+            </button>
+            
+            <button onclick="openModal('demoVideoModal')" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-700 font-bold text-base border border-slate-300 shadow-sm transition-all flex items-center justify-center gap-2 group">
+              <i class="fa-solid fa-circle-play text-brand-amber group-hover:scale-110 transition-transform"></i>
+              <span>Watch 2-Min Methodology Tour</span>
+            </button>
+          </div>
+
+          <!-- Credibility stats -->
+          <div class="pt-6 border-t border-slate-200/80 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0">
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-brand-navy">18,500+</div>
+              <div class="text-xs text-slate-500 font-medium">Certified Educators</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-brand-sky">94.8%</div>
+              <div class="text-xs text-slate-500 font-medium">Concept Retention Lift</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-brand-amber">450+</div>
+              <div class="text-xs text-slate-500 font-medium">Districts Partnered</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Mascot & Interactive Visual Card -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          
+          <!-- Decorative Glow Behind Card -->
+          <div class="absolute -top-6 -bottom-6 -left-6 -right-6 bg-gradient-to-tr from-brand-sky/20 via-brand-amber/15 to-transparent rounded-3xl blur-2xl"></div>
+
+          <!-- Main Hero Showcase Card -->
+          <div class="card-glass w-full max-w-md rounded-3xl p-6 sm:p-8 shadow-2xl relative border border-white/60">
+            
+            <!-- Mascot Header Badge -->
+            <div class="flex items-center justify-between pb-5 border-b border-slate-100">
+              <div class="flex items-center gap-3">
+                <div class="w-14 h-14 bg-gradient-to-br from-brand-navy to-brand-blue rounded-2xl flex items-center justify-center p-2 shadow-md">
+                  <!-- Animated Mascot Face inside the Infinity Pencil -->
+                  <svg viewBox="0 0 240 130" class="w-full h-full" fill="none">
+                    <path d="M 68 20 C 35 20, 15 42, 15 65 C 15 88, 35 110, 68 110 C 95 110, 115 90, 136 68 C 156 46, 178 20, 204 20 C 230 20, 235 48, 235 65 C 235 84, 215 110, 178 110 C 160 110, 142 98, 130 85" stroke="#ffffff" stroke-width="20" stroke-linecap="round"/>
+                    <path d="M 50 100 C 85 106, 120 85, 148 65 L 175 48" stroke="#00c2cb" stroke-width="24" stroke-linecap="round"/>
+                    <polygon points="170,36 198,42 162,60" fill="#f79256" />
+                    <polygon points="190,40 202,42.5 186,47" fill="#0b2545" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-bold text-slate-800 leading-tight">Meet "Numi"</h3>
+                  <p class="text-xs text-brand-sky font-semibold">Your Infinity Pedagogy Coach</p>
+                </div>
+              </div>
+              <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-amber-100 text-brand-coral">
+                <i class="fa-solid fa-bolt mr-1"></i> Quick Spark
+              </span>
+            </div>
+
+            <!-- Dynamic Interactive Classroom Scenario Switcher -->
+            <div class="mt-5 space-y-4">
+              <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Teacher Dilemma of the Day:</p>
+                <p id="heroDilemmaText" class="text-sm font-bold text-slate-800 mt-1">
+                  "Students continually confuse -(-x) with multiplying two negative factors."
+                </p>
+              </div>
+
+              <div class="bg-sky-50/80 p-4 rounded-2xl border border-sky-100/80 transition-all">
+                <div class="flex items-center justify-between text-xs font-bold text-brand-deep mb-1">
+                  <span class="flex items-center gap-1.5">
+                    <i class="fa-solid fa-lightbulb text-brand-amber"></i> Numi's Visual Intervention:
+                  </span>
+                  <span id="heroStrategyTag" class="text-[10px] bg-white px-2 py-0.5 rounded shadow-xs text-brand-blue">Number Line Vectors</span>
+                </div>
+                <p id="heroSolutionText" class="text-xs text-slate-700 leading-relaxed">
+                  Shift from "two negatives make a positive" memorization to walking backwards facing in the negative direction on a giant taped floor grid.
+                </p>
+              </div>
+
+              <!-- Interactive Scenario Buttons -->
+              <div class="flex items-center justify-between pt-1">
+                <span class="text-xs font-medium text-slate-500">Cycle classroom tips:</span>
+                <div class="flex gap-2">
+                  <button onclick="cycleHeroTip(-1)" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-chevron-left text-xs"></i>
+                  </button>
+                  <button onclick="cycleHeroTip(1)" class="w-8 h-8 rounded-lg bg-brand-sky hover:bg-brand-blue text-white flex items-center justify-center transition-colors shadow">
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Community Badge -->
+              <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                <div class="flex -space-x-2">
+                  <div class="w-7 h-7 rounded-full bg-blue-500 text-white flex items-center justify-center text-[10px] font-bold border-2 border-white">JS</div>
+                  <div class="w-7 h-7 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[10px] font-bold border-2 border-white">MR</div>
+                  <div class="w-7 h-7 rounded-full bg-purple-500 text-white flex items-center justify-center text-[10px] font-bold border-2 border-white">DK</div>
+                  <div class="w-7 h-7 rounded-full bg-amber-500 text-white flex items-center justify-center text-[10px] font-bold border-2 border-white">+4k</div>
+                </div>
+                <span class="font-medium text-slate-600">Active math teachers online now</span>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BRAND VALUE PILLARS ==================== -->
+  <section class="py-12 bg-white border-y border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-sky-50 text-brand-sky flex items-center justify-center text-xl flex-shrink-0">
+            <i class="fa-solid fa-shapes"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 text-base">CRA Methodology</h4>
+            <p class="text-xs text-slate-500 mt-1 leading-normal">Concrete &rarr; Representational &rarr; Abstract frameworks for durable mathematical thinking.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-amber-50 text-brand-amber flex items-center justify-center text-xl flex-shrink-0">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 text-base">Misconception Traps</h4>
+            <p class="text-xs text-slate-500 mt-1 leading-normal">Pre-empt intuitive traps before grading tests with intentional formative prompts.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl flex-shrink-0">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 text-base">Anxiety Demolition</h4>
+            <p class="text-xs text-slate-500 mt-1 leading-normal">Proven strategies to replace "I am not a math person" with low-floor, high-ceiling challenges.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl flex-shrink-0">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 text-base">Saves 4+ Hrs/Week</h4>
+            <p class="text-xs text-slate-500 mt-1 leading-normal">Download ready-to-print inquiry guides, student manipulatives, and discussion rubric sets.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== INTERACTIVE TOOL: VISUAL MATH STRATEGY LAB ==================== -->
+  <section id="strategy-lab" class="py-20 bg-slate-50/70 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-brand-deep font-bold text-xs uppercase tracking-wider mb-3">
+          <i class="fa-solid fa-microscope text-brand-sky"></i> Interactive Educator Sandbox
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
+          Pedagogical Strategy & Visual Lab
+        </h2>
+        <p class="text-slate-600 mt-3 text-base">
+          Select your grade level and math domain to inspect the recommended conceptual visualizer, lesson hooks, common pitfalls, and download the starter slide pack.
+        </p>
+      </div>
+
+      <!-- Strategy Lab Container -->
+      <div class="bg-white rounded-3xl shadow-xl border border-slate-200/90 overflow-hidden">
+        
+        <!-- Controls Bar -->
+        <div class="p-6 sm:p-8 bg-gradient-to-r from-brand-navy to-brand-deep text-white">
+          <div class="grid md:grid-cols-2 gap-6">
+            
+            <!-- Level Selector -->
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-cyan-200 mb-2">1. Select Grade Band</label>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2" id="gradeBandButtonGroup">
+                <button onclick="setStrategyLevel('elementary')" class="strategy-btn px-3 py-2 text-xs font-bold rounded-xl border border-white/20 bg-white/10 hover:bg-white/20 transition-all text-center">Elementary (3-5)</button>
+                <button onclick="setStrategyLevel('middle')" class="strategy-btn px-3 py-2 text-xs font-bold rounded-xl border border-brand-cyan bg-brand-cyan text-brand-navy font-extrabold shadow transition-all text-center">Middle (6-8)</button>
+                <button onclick="setStrategyLevel('high')" class="strategy-btn px-3 py-2 text-xs font-bold rounded-xl border border-white/20 bg-white/10 hover:bg-white/20 transition-all text-center">High School (9-11)</button>
+                <button onclick="setStrategyLevel('calc')" class="strategy-btn px-3 py-2 text-xs font-bold rounded-xl border border-white/20 bg-white/10 hover:bg-white/20 transition-all text-center">AP / Calculus</button>
+              </div>
+            </div>
+
+            <!-- Topic Selector -->
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-cyan-200 mb-2">2. Focus Mathematical Domain</label>
+              <div class="flex flex-wrap gap-2" id="topicButtonGroup">
+                <!-- Populated dynamically via JS -->
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Strategy Dynamic Content Display -->
+        <div class="p-6 sm:p-10">
+          <div class="grid lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Left: Visual Concept Model Canvas / Simulation -->
+            <div class="lg:col-span-6 bg-slate-900 rounded-2xl p-6 text-white relative overflow-hidden flex flex-col justify-between min-h-[380px]">
+              <div>
+                <div class="flex items-center justify-between pb-3 border-b border-slate-700/80">
+                  <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                    <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+                    <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                    <span id="visualModelTitle" class="ml-2 font-mono text-xs text-slate-300">visual_model.math</span>
+                  </div>
+                  <span class="text-[11px] font-mono bg-brand-sky/20 text-brand-sky px-2 py-0.5 rounded">Live Interactive Demo</span>
+                </div>
+
+                <!-- Dynamic Visual Simulator Container -->
+                <div id="visualCanvasContainer" class="py-8 flex flex-col items-center justify-center">
+                  <!-- Injected by JS -->
+                </div>
+              </div>
+
+              <!-- Interactive slider / control inside visualizer -->
+              <div id="visualControls" class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
+                <span class="text-slate-400">Tweak Parameter:</span>
+                <input type="range" id="paramSlider" min="1" max="10" value="4" class="w-48 accent-brand-cyan cursor-pointer" oninput="updateVisualParam(this.value)">
+                <span id="paramValue" class="font-mono text-brand-cyan font-bold">n = 4</span>
+              </div>
+            </div>
+
+            <!-- Right: Pedagogical Guidance & Lesson Hook -->
+            <div class="lg:col-span-6 space-y-6">
+              
+              <div>
+                <div class="flex items-center gap-2 text-xs font-extrabold text-brand-sky uppercase tracking-wider">
+                  <i class="fa-solid fa-puzzle-piece"></i> Recommended Pedagogy
+                </div>
+                <h3 id="strategyHeadline" class="text-2xl font-bold text-slate-900 mt-1">Area Model of Binomial Expansion</h3>
+                <p id="strategySummary" class="text-sm text-slate-600 mt-2 leading-relaxed">
+                  Bridge the gap between arithmetic multiplication arrays and algebraic identities $(x+a)(x+b)$ by letting students visually dissect 2D area tiles before introducing formulaic FOIL.
+                </p>
+              </div>
+
+              <!-- Misconception Alert Callout -->
+              <div class="bg-amber-50 border-l-4 border-brand-amber p-4 rounded-r-xl">
+                <div class="flex items-center gap-2 text-xs font-bold text-amber-900 uppercase">
+                  <i class="fa-solid fa-triangle-exclamation text-brand-amber"></i> Frequent Student Pitfall
+                </div>
+                <p id="strategyPitfall" class="text-xs sm:text-sm text-amber-950 mt-1 font-medium">
+                  Students write (x + 3)&sup2; = x&sup2; + 9, omitting middle terms because they distribute the exponent rather than computing the composite rectangular area.
+                </p>
+              </div>
+
+              <!-- Concrete Anchor & Prompt -->
+              <div class="space-y-2">
+                <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">Low-Floor Inquiry Hook Question</h4>
+                <div class="bg-slate-100 p-3.5 rounded-xl border border-slate-200">
+                  <p id="strategyHook" class="text-sm italic font-medium text-slate-800">
+                    "If a garden square is lengthened by 3 meters on each side, why doesn't its total area just increase by 9?"
+                  </p>
+                </div>
+              </div>
+
+              <!-- Action button -->
+              <div class="pt-2 flex flex-wrap gap-3">
+                <button onclick="downloadResourceToast()" class="px-5 py-2.5 rounded-xl bg-brand-sky hover:bg-brand-blue text-white text-xs font-bold flex items-center gap-2 shadow transition-all">
+                  <i class="fa-solid fa-file-arrow-down"></i>
+                  <span>Download Lesson Slides & Handout (PDF)</span>
+                </button>
+                <button onclick="openModal('lessonDetailsModal')" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold flex items-center gap-1.5 transition-all">
+                  <i class="fa-solid fa-chalkboard-user"></i>
+                  <span>View Teacher Rubric</span>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== CORE LEARNING TRACKS / MODULES ==================== -->
+  <section id="tracks" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div class="max-w-2xl">
+          <div class="text-xs font-bold text-brand-sky tracking-wider uppercase mb-2">Curriculum Pathways</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
+            Accredited Teacher Learning Tracks
+          </h2>
+          <p class="text-slate-600 mt-2 text-base">
+            Each track includes self-paced video masterclasses, classroom-ready downloadable toolkits, live coaching critiques, and Continuing Education Units (CEUs).
+          </p>
+        </div>
+        <div class="mt-4 md:mt-0">
+          <span class="text-xs font-medium text-slate-500 bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">
+            <i class="fa-solid fa-award text-brand-amber mr-1.5"></i> State & National Board Aligned
+          </span>
+        </div>
+      </div>
+
+      <!-- Tracks Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Track 1 -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between hover:shadow-xl hover:border-brand-sky/60 transition-all duration-300 group">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-100 text-brand-blue flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-cubes"></i>
+            </div>
+            <div class="text-[11px] font-bold text-brand-sky uppercase tracking-wide">Track 01 &bull; 6 Modules</div>
+            <h3 class="text-lg font-bold text-brand-navy mt-1 group-hover:text-brand-sky transition-colors">Visualizing Abstract Concepts</h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Transform non-intuitive algebra and spatial geometry into physical, digital, and dynamic graph intuitions using GeoGebra, bar models, and double number lines.
+            </p>
+            <div class="mt-4 space-y-1.5 text-xs text-slate-600 font-medium">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-[10px]"></i> Tape & Bar Modeling</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-[10px]"></i> Coordinate Plane Geometry</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-[10px]"></i> Dynamic Function Transformations</div>
+            </div>
+          </div>
+          <div class="pt-6 border-t border-slate-100 mt-6 flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-700">12 CEU Hours</span>
+            <button onclick="previewTrack('Visualizing Abstract Concepts')" class="text-xs font-bold text-brand-blue hover:text-brand-navy flex items-center gap-1">
+              Explore Syllabus &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Track 2 -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between hover:shadow-xl hover:border-brand-sky/60 transition-all duration-300 group">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-100 text-brand-coral flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <div class="text-[11px] font-bold text-brand-coral uppercase tracking-wide">Track 02 &bull; 8 Modules</div>
+            <h3 class="text-lg font-bold text-brand-navy mt-1 group-hover:text-brand-coral transition-colors">From Rote to Reasoning</h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Dismantle mindless algorithm memorization. Facilitate math talks, notice-and-wonder routines, and low-floor/high-ceiling rich open tasks.
+            </p>
+            <div class="mt-4 space-y-1.5 text-xs text-slate-600 font-medium">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-[10px]"></i> Number Talk Orchestration</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-[10px]"></i> Which One Doesn't Belong (WODB)</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-[10px]"></i> 3-Act Math Storytelling</div>
+            </div>
+          </div>
+          <div class="pt-6 border-t border-slate-100 mt-6 flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-700">16 CEU Hours</span>
+            <button onclick="previewTrack('From Rote to Reasoning')" class="text-xs font-bold text-brand-coral hover:text-brand-navy flex items-center gap-1">
+              Explore Syllabus &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Track 3 -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between hover:shadow-xl hover:border-brand-sky/60 transition-all duration-300 group">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-cyan-100 text-brand-deep flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-gamepad"></i>
+            </div>
+            <div class="text-[11px] font-bold text-brand-deep uppercase tracking-wide">Track 03 &bull; 5 Modules</div>
+            <h3 class="text-lg font-bold text-brand-navy mt-1 group-hover:text-brand-sky transition-colors">Gamified Math & Formative Checks</h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Design engaging escape rooms, digital scavenger hunts, and diagnostic exit tickets that reveal student mastery without triggering test fear.
+            </p>
+            <div class="mt-4 space-y-1.5 text-xs text-slate-600 font-medium">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-[10px]"></i> Escape Room Math Blueprints</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-[10px]"></i> 60-Second Mastery Checks</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-[10px]"></i> Error Analysis Tournaments</div>
+            </div>
+          </div>
+          <div class="pt-6 border-t border-slate-100 mt-6 flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-700">10 CEU Hours</span>
+            <button onclick="previewTrack('Gamified Math & Formative Checks')" class="text-xs font-bold text-brand-blue hover:text-brand-navy flex items-center gap-1">
+              Explore Syllabus &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Track 4 -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between hover:shadow-xl hover:border-brand-sky/60 transition-all duration-300 group">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <div class="text-[11px] font-bold text-purple-600 uppercase tracking-wide">Track 04 &bull; 6 Modules</div>
+            <h3 class="text-lg font-bold text-brand-navy mt-1 group-hover:text-purple-600 transition-colors">Demolishing Math Anxiety</h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Practical psychological and classroom culture tools to rewrite self-narratives, celebrate productive struggles, and engage reluctant learners.
+            </p>
+            <div class="mt-4 space-y-1.5 text-xs text-slate-600 font-medium">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-[10px]"></i> Growth Mindset Norms</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-[10px]"></i> Rough-Draft Math Thinking</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-[10px]"></i> De-escalating Math Blockages</div>
+            </div>
+          </div>
+          <div class="pt-6 border-t border-slate-100 mt-6 flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-700">14 CEU Hours</span>
+            <button onclick="previewTrack('Demolishing Math Anxiety')" class="text-xs font-bold text-purple-600 hover:text-brand-navy flex items-center gap-1">
+              Explore Syllabus &rarr;
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== INTERACTIVE LESSON LAB / WORKSHEET GENERATOR ==================== -->
+  <section id="lesson-generator" class="py-20 bg-slate-100/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-sky/10 text-brand-deep border border-brand-sky/30 uppercase tracking-wide">
+          Ready-to-Print Toolkit
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight mt-2">
+          Interactive Lesson Lab & Worksheet Generator
+        </h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">
+          Preview and instantly customize inquiry-driven handouts with 3-tier differentiated question ladders and visual scaffolding.
+        </p>
+      </div>
+
+      <!-- Generator Shell -->
+      <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+        
+        <!-- Tab Selector Header -->
+        <div class="flex overflow-x-auto border-b border-slate-200 bg-slate-50 px-6 pt-4 gap-4" id="lessonTabs">
+          <button onclick="switchLessonTemplate('fractions')" class="lesson-tab-btn px-4 py-3 text-sm font-bold border-b-2 border-brand-sky text-brand-navy whitespace-nowrap">
+            <i class="fa-solid fa-pizza-slice mr-2 text-brand-amber"></i> Fraction Equivalence Inquiry
+          </button>
+          <button onclick="switchLessonTemplate('pythagoras')" class="lesson-tab-btn px-4 py-3 text-sm font-semibold border-b-2 border-transparent text-slate-500 hover:text-slate-800 whitespace-nowrap">
+            <i class="fa-solid fa-draw-polygon mr-2 text-brand-sky"></i> Pythagorean Square Proof
+          </button>
+          <button onclick="switchLessonTemplate('quadratics')" class="lesson-tab-btn px-4 py-3 text-sm font-semibold border-b-2 border-transparent text-slate-500 hover:text-slate-800 whitespace-nowrap">
+            <i class="fa-solid fa-chart-line mr-2 text-emerald-500"></i> Projectile Quadratics
+          </button>
+        </div>
+
+        <!-- Active Template Content Preview -->
+        <div class="p-6 sm:p-10">
+          <div class="grid lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Handout Document Simulation Preview -->
+            <div class="lg:col-span-7 bg-white border-2 border-slate-300 rounded-2xl p-6 sm:p-8 shadow-sm relative font-sans">
+              
+              <!-- Printable Header -->
+              <div class="flex items-center justify-between pb-4 border-b-2 border-slate-800">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded bg-brand-navy flex items-center justify-center text-white text-xs font-bold">
+                    &infin;
+                  </div>
+                  <div>
+                    <h4 id="sheetTitle" class="font-bold text-slate-900 text-base">Fraction Equivalence Through Visual Slicing</h4>
+                    <span id="sheetGrade" class="text-xs text-slate-500">Grade 4-6 Mathematics &bull; NumIQ Inquiry Lab</span>
+                  </div>
+                </div>
+                <div class="text-right text-xs text-slate-400">
+                  <div>Name: ____________________</div>
+                  <div class="mt-1">Date: ________ Period: _____</div>
+                </div>
+              </div>
+
+              <!-- Sheet Body -->
+              <div class="mt-6 space-y-6 text-sm">
+                
+                <!-- Stage 1: Concrete Exploration -->
+                <div>
+                  <span class="text-xs font-extrabold uppercase px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">Part A: Low Floor (Notice & Wonder)</span>
+                  <p id="sheetPartA" class="mt-2 text-slate-700">
+                    Examine the two chocolate bars below. Bar A is divided into 3 equal pieces. Bar B is divided into 6 equal pieces. Color in 2 parts of Bar A and 4 parts of Bar B.
+                  </p>
+                  <div class="mt-3 flex gap-4 items-center">
+                    <div class="w-36 h-10 border border-slate-400 rounded grid grid-cols-3 divide-x divide-slate-400 text-[10px] text-center items-center text-slate-500 bg-slate-50">
+                      <span>1/3</span><span class="bg-sky-200 font-bold text-brand-navy">1/3</span><span class="bg-sky-200 font-bold text-brand-navy">1/3</span>
+                    </div>
+                    <div class="text-sm font-bold text-slate-400">&harr;</div>
+                    <div class="w-36 h-10 border border-slate-400 rounded grid grid-cols-6 divide-x divide-slate-400 text-[9px] text-center items-center text-slate-500 bg-slate-50">
+                      <span>1/6</span><span>1/6</span><span class="bg-amber-200 font-bold text-amber-900">1/6</span><span class="bg-amber-200 font-bold text-amber-900">1/6</span><span class="bg-amber-200 font-bold text-amber-900">1/6</span><span class="bg-amber-200 font-bold text-amber-900">1/6</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Stage 2: Abstract Reasoning -->
+                <div class="pt-4 border-t border-slate-200">
+                  <span class="text-xs font-extrabold uppercase px-2 py-0.5 rounded bg-sky-100 text-brand-deep">Part B: Guided Generalization</span>
+                  <p id="sheetPartB" class="mt-2 text-slate-700">
+                    What happens to the number of slices when we multiply both numerator and denominator by 2? Why doesn't the total eaten amount change?
+                  </p>
+                  <div class="h-12 border-b border-dashed border-slate-400 mt-2"></div>
+                </div>
+
+                <!-- Stage 3: High Ceiling Challenge -->
+                <div class="pt-4 border-t border-slate-200">
+                  <span class="text-xs font-extrabold uppercase px-2 py-0.5 rounded bg-purple-100 text-purple-800">Part C: High Ceiling Non-Routine</span>
+                  <p id="sheetPartC" class="mt-2 text-slate-700">
+                    Can a fraction with denominator 5 ever be equivalent to a fraction with denominator 12? Explain mathematically without using a calculator.
+                  </p>
+                  <div class="h-10 border-b border-dashed border-slate-400 mt-2"></div>
+                </div>
+
+              </div>
+
+              <!-- Watermark tag -->
+              <div class="mt-6 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
+                <span>Certified NumIQ Classroom Resource</span>
+                <span>Licensed for Teacher Classroom Distribution</span>
+              </div>
+            </div>
+
+            <!-- Customizer Actions Sidebar -->
+            <div class="lg:col-span-5 space-y-5">
+              <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                <h4 class="font-bold text-slate-900 text-base mb-3 flex items-center gap-2">
+                  <i class="fa-solid fa-sliders text-brand-sky"></i> Differentiation Settings
+                </h4>
+
+                <div class="space-y-4 text-xs font-medium text-slate-700">
+                  <div>
+                    <label class="block font-bold mb-1">Student Scaffolding Level</label>
+                    <select id="scaffoldSelect" onchange="adjustScaffold(this.value)" class="w-full bg-white border border-slate-300 rounded-lg p-2 text-xs focus:ring-2 focus:ring-brand-sky outline-none">
+                      <option value="supported">High Visual Support (ELL / Tier 2)</option>
+                      <option value="standard" selected>Balanced Grade-Level Inquiry</option>
+                      <option value="advanced">Deep Extension & Proof-Focused</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="block font-bold mb-1">Include Answer Key & Teacher Talking Points</label>
+                    <div class="flex items-center gap-2 mt-1">
+                      <input type="checkbox" id="includeKey" checked class="accent-brand-sky w-4 h-4 rounded">
+                      <span class="text-slate-600">Include common misconception rebuttal notes</span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label class="block font-bold mb-1">Language Edition</label>
+                    <div class="flex gap-2">
+                      <button class="px-2.5 py-1 bg-white border border-slate-300 rounded text-slate-700 font-bold hover:border-brand-sky">English</button>
+                      <button class="px-2.5 py-1 bg-white border border-slate-300 rounded text-slate-700 hover:border-brand-sky">Spanish (Dual Lang)</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-slate-200 space-y-2">
+                  <button onclick="triggerPrintModal()" class="w-full py-3 rounded-xl bg-brand-navy hover:bg-brand-deep text-white text-xs font-bold flex items-center justify-center gap-2 shadow-md transition-all">
+                    <i class="fa-solid fa-print"></i>
+                    <span>Generate & Print Clean PDF</span>
+                  </button>
+                  <button onclick="copyShareLink()" class="w-full py-2.5 rounded-xl bg-white hover:bg-slate-100 border border-slate-300 text-slate-700 text-xs font-bold flex items-center justify-center gap-2 transition-all">
+                    <i class="fa-regular fa-copy"></i>
+                    <span>Copy Google Slides / Doc Link</span>
+                  </button>
+                </div>
+
+              </div>
+
+              <!-- Teacher Note Box -->
+              <div class="p-4 rounded-xl bg-blue-50/70 border border-blue-200 text-xs text-brand-navy">
+                <span class="font-bold flex items-center gap-1.5 mb-1">
+                  <i class="fa-solid fa-graduation-cap text-brand-sky"></i> Pedagogical Purpose:
+                </span>
+                Prevents students from merely cross-multiplying digits without internalizing ratios as scale factors.
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== TEACHER COMMUNITY & TESTIMONIALS ==================== -->
+  <section id="community" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-sky">Educator Community</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight mt-1">
+          Loved by Math Department Heads & Teachers
+        </h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">
+          Join thousands of dedicated educators sharing lesson breakdowns, grading rubrics, and breakthrough moments every single day.
+        </p>
+      </div>
+
+      <!-- Testimonial Grid -->
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- Card 1 -->
+        <div class="bg-slate-50 rounded-2xl p-7 border border-slate-200/80 flex flex-col justify-between hover:shadow-lg transition-all">
+          <div>
+            <div class="flex text-amber-400 text-xs gap-1 mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed italic">
+              "NumIQ changed my entire 7th grade team's approach to negative numbers and ratios. We used to spend October dreading fractions; now our students argue excitedly over visual proofs using Numi's frameworks."
+            </p>
+          </div>
+          <div class="pt-6 border-t border-slate-200/60 mt-6 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-deep text-white flex items-center justify-center font-bold text-xs">
+              EW
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-slate-900 leading-tight">Elena Warren</h5>
+              <p class="text-xs text-slate-500">7th Grade Lead, Austin ISD</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-slate-50 rounded-2xl p-7 border border-slate-200/80 flex flex-col justify-between hover:shadow-lg transition-all">
+          <div>
+            <div class="flex text-amber-400 text-xs gap-1 mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed italic">
+              "As an AP Calculus teacher, I struggled to help students truly grasp Riemann sums and Taylor approximations intuitively. The interactive visual tracks in NumIQ gave me dynamic animations that made limits click in one period."
+            </p>
+          </div>
+          <div class="pt-6 border-t border-slate-200/60 mt-6 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-sky text-white flex items-center justify-center font-bold text-xs">
+              DC
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-slate-900 leading-tight">David Chen, M.Ed</h5>
+              <p class="text-xs text-slate-500">AP Calculus AB/BC, Seattle Public Schools</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-slate-50 rounded-2xl p-7 border border-slate-200/80 flex flex-col justify-between hover:shadow-lg transition-all">
+          <div>
+            <div class="flex text-amber-400 text-xs gap-1 mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed italic">
+              "The district-wide licensing paid for itself tenfold. Our state benchmark scores rose 18% in conceptual application questions, and teacher burnout over lesson planning plummeted."
+            </p>
+          </div>
+          <div class="pt-6 border-t border-slate-200/60 mt-6 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-coral text-white flex items-center justify-center font-bold text-xs">
+              SM
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-slate-900 leading-tight">Dr. Sharon Miller</h5>
+              <p class="text-xs text-slate-500">Director of STEM Curriculum, Chicago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Live Community Question Ticker -->
+      <div class="mt-12 bg-gradient-to-r from-slate-900 via-brand-navy to-slate-900 rounded-2xl p-6 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-brand-sky/20 border border-brand-sky/40 text-brand-cyan flex items-center justify-center text-xl flex-shrink-0">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-brand-cyan uppercase tracking-wider">Live Discussion Thread</div>
+            <div class="text-sm font-semibold text-slate-200 mt-0.5">"How do you introduce irrational numbers so 8th graders don't just think it means messy decimals?"</div>
+          </div>
+        </div>
+        <button onclick="openModal('communityModal')" class="flex-shrink-0 px-5 py-2.5 rounded-xl bg-brand-sky hover:bg-brand-blue text-white text-xs font-bold transition-all">
+          Join Community Conversation &rarr;
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== PRICING & SCHOOL LICENSING ==================== -->
+  <section id="pricing" class="py-20 bg-slate-50/80 border-t border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-sky">Transparent Investment</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight mt-1">
+          Simple Plans for Solo Educators & Entire Districts
+        </h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">
+          Eligible for Title I, Title II-A, ESSER, and standard departmental professional development funding budgets.
+        </p>
+      </div>
+
+      <!-- Pricing Cards -->
+      <div class="grid lg:grid-cols-3 gap-8 items-stretch">
+        
+        <!-- Tier 1: Solo Teacher -->
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-bold text-slate-900">Solo Educator</h3>
+            <p class="text-xs text-slate-500 mt-1">For proactive teachers wanting personal professional growth & materials.</p>
+            <div class="mt-6 flex items-baseline gap-1">
+              <span class="text-4xl font-extrabold text-brand-navy">$14</span>
+              <span class="text-xs font-medium text-slate-500">/ month, billed annually</span>
+            </div>
+            
+            <ul class="mt-8 space-y-3 text-xs text-slate-600">
+              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-brand-sky"></i> Unlimited access to all 4 learning tracks</li>
+              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-brand-sky"></i> 300+ downloadable lesson inquiry packs</li>
+              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-brand-sky"></i> Printable student manipulatives & rubrics</li>
+              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-brand-sky"></i> NumIQ Teacher Circle community access</li>
+              <li class="flex items-center gap-2.5 text-slate-400"><i class="fa-solid fa-xmark"></i> Dedicated school PD facilitator</li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-slate-100">
+            <button onclick="openModal('signupModal')" class="w-full py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold transition-all">
+              Start 14-Day Free Trial
+            </button>
+          </div>
+        </div>
+
+        <!-- Tier 2: Math Department (Highlighted) -->
+        <div class="bg-gradient-to-b from-brand-navy to-brand-deep rounded-3xl p-8 text-white shadow-2xl relative flex flex-col justify-between transform lg:-translate-y-2 border-2 border-brand-cyan">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-brand-cyan text-brand-navy text-[11px] font-extrabold px-4 py-1 rounded-full uppercase tracking-wider shadow">
+            Most Popular For Schools
+          </div>
+          
+          <div>
+            <h3 class="text-xl font-bold text-white">Math Department</h3>
+            <p class="text-xs text-sky-200 mt-1">For building-level teams (up to 12 teachers) seeking vertical alignment.</p>
+            <div class="mt-6 flex items-baseline gap-1">
+              <span class="text-4xl font-extrabold text-white">$89</span>
+              <span class="text-xs font-medium text-sky-200">/ month per school</span>
+            </div>
+            
+            <ul class="mt-8 space-y-3 text-xs text-slate-200">
+              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-brand-cyan"></i> Everything in Solo Educator</li>
+              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-brand-cyan"></i> Up to 12 teacher seats included</li>
+              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-brand-cyan"></i> Official CEU certificates issued</li>
+              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-brand-cyan"></i> Department curriculum alignment tool</li>
+              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-brand-cyan"></i> 2 Live Zoom Q&A Coaching Clinics / semester</li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-white/10">
+            <button onclick="openModal('signupModal')" class="w-full py-3 rounded-xl bg-gradient-to-r from-brand-sky to-brand-cyan hover:opacity-95 text-brand-navy text-xs font-extrabold shadow-lg transition-all">
+              Equip Your Department
+            </button>
+          </div>
+        </div>
+
+        <!-- Tier 3: District Wide -->
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-bold text-slate-900">District Partnership</h3>
+            <p class="text-xs text-slate-500 mt-1">Custom system-wide deployment, LMS integrations, and in-person workshops.</p>
+            <div class="mt-6 flex items-baseline gap-1">
+              <span class="text-4xl font-extrabold text-brand-navy">Custom</span>
+              <span class="text-xs font-medium text-slate-500">PO & Vendor Invoicing</span>
+            </div>
+            
+            <ul class="mt-8 space-y-3 text-xs text-slate-600">
+              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-brand-sky"></i> Unlimited district teacher licenses</li>
+              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-brand-sky"></i> Single Sign-On (Google, Clever, Canvas)</li>
+              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-brand-sky"></i> On-site Keynote & PD Workshop delivery</li>
+              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-brand-sky"></i> Custom state standards crosswalk</li>
+              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-brand-sky"></i> Dedicated STEM Specialist advisor</li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-slate-100">
+            <button onclick="openModal('quoteModal')" class="w-full py-3 rounded-xl bg-white hover:bg-slate-100 border border-slate-300 text-slate-800 text-xs font-bold transition-all">
+              Request District Quote / W-9
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Grant Funding Notice -->
+      <div class="mt-10 text-center text-xs text-slate-500">
+        <i class="fa-solid fa-file-invoice-dollar mr-1 text-slate-400"></i> Need purchase order approval or vendor approval forms? <button onclick="openModal('quoteModal')" class="text-brand-sky font-bold underline">Download our vendor packet</button>.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FLOATING / STICKY MASCOT: "TIP FROM NUMI" ==================== -->
+  <div id="numiFloatingWidget" class="fixed bottom-6 right-6 z-40">
+    <div class="relative group">
+      
+      <!-- Speech bubble tip popup (expandable) -->
+      <div id="numiSpeechBubble" class="absolute bottom-16 right-0 w-80 sm:w-96 bg-white rounded-2xl shadow-2xl border border-slate-200 p-5 transform transition-all duration-300 opacity-0 pointer-events-none translate-y-3">
+        <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+          <div class="flex items-center gap-2 text-xs font-bold text-brand-navy">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            <span>Numi's Math Pedagogical Spark</span>
+          </div>
+          <button onclick="toggleNumiBubble()" class="text-slate-400 hover:text-slate-600 text-sm">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="mt-3">
+          <div class="text-[11px] font-bold text-brand-amber uppercase tracking-wider">Today's Quick Math Hook:</div>
+          <p id="numiQuoteText" class="text-xs font-medium text-slate-700 mt-1 leading-relaxed">
+            "Before teaching the fraction division rule 'keep-change-flip', ask: 'How many quarter-dollar coins are in 3 dollars?' (3 &divide; 1/4 = 12). The reciprocal rule suddenly makes physical sense!"
+          </p>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+          <button onclick="shuffleNumiTip()" class="text-[11px] font-bold text-brand-sky hover:text-brand-blue flex items-center gap-1">
+            <i class="fa-solid fa-rotate text-xs"></i> Next Idea
+          </button>
+          <button onclick="copyNumiTip()" class="text-[11px] font-bold text-slate-600 hover:text-slate-900 flex items-center gap-1">
+            <i class="fa-regular fa-copy"></i> Copy to Lesson
+          </button>
+        </div>
+      </div>
+
+      <!-- Mascot Avatar Trigger Button -->
+      <button onclick="toggleNumiBubble()" class="w-16 h-16 rounded-full bg-gradient-to-br from-brand-navy via-brand-deep to-brand-blue text-white shadow-xl hover:shadow-2xl flex items-center justify-center p-3 transition-transform hover:scale-110 active:scale-95 border-2 border-white focus:outline-none" aria-label="Numi Math Mascot">
+        <!-- Mascot Vector -->
+        <svg viewBox="0 0 240 130" class="w-full h-full" fill="none">
+          <path d="M 68 20 C 35 20, 15 42, 15 65 C 15 88, 35 110, 68 110 C 95 110, 115 90, 136 68 C 156 46, 178 20, 204 20 C 230 20, 235 48, 235 65 C 235 84, 215 110, 178 110 C 160 110, 142 98, 130 85" stroke="#ffffff" stroke-width="20" stroke-linecap="round"/>
+          <path d="M 50 100 C 85 106, 120 85, 148 65 L 175 48" stroke="#00c2cb" stroke-width="24" stroke-linecap="round"/>
+          <polygon points="170,36 198,42 162,60" fill="#f79256" />
+          <polygon points="190,40 202,42.5 186,47" fill="#ffffff" />
+        </svg>
+        <!-- Ping indicator badge -->
+        <span class="absolute top-0 right-0 w-4 h-4 rounded-full bg-brand-amber border-2 border-white flex items-center justify-center text-[8px] font-bold">1</span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- ==================== NEWSLETTER & TEACHER TOOLKIT CALLOUT ==================== -->
+  <section class="py-16 bg-gradient-to-br from-brand-navy via-brand-deep to-slate-900 text-white relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div class="w-16 h-16 mx-auto mb-4 bg-brand-sky/20 rounded-2xl flex items-center justify-center text-brand-cyan text-2xl border border-brand-sky/30">
+        <i class="fa-solid fa-paper-plane"></i>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+        Get "The Friday Math Hook" in Your Inbox
+      </h2>
+      <p class="text-slate-300 mt-2 max-w-xl mx-auto text-sm sm:text-base">
+        Every Friday morning: 1 visual dilemma, 1 low-floor inquiry warm-up, and 1 downloadable handout for your Monday morning classes. Zero spam, 100% pedagogy.
+      </p>
+
+      <form onsubmit="handleNewsletter(event)" class="mt-8 max-w-md mx-auto flex flex-col sm:flex-row gap-2">
+        <input type="email" required placeholder="Enter your school email address..." class="flex-grow px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-cyan text-sm">
+        <button type="submit" class="px-6 py-3 rounded-xl bg-brand-cyan hover:bg-brand-sky text-brand-navy font-extrabold text-sm transition-all shadow-md">
+          Join 35,000+ Teachers
+        </button>
+      </form>
+      <div class="text-[11px] text-slate-400 mt-3">Free forever. Unsubscribe anytime with 1 click.</div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-white border-t border-slate-200 pt-16 pb-12 text-slate-600 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+        
+        <!-- Brand column -->
+        <div class="col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 flex-shrink-0">
+              <svg viewBox="0 0 240 130" class="w-full h-full" fill="none">
+                <path d="M 68 20 C 35 20, 15 42, 15 65 C 15 88, 35 110, 68 110 C 95 110, 115 90, 136 68 C 156 46, 178 20, 204 20 C 230 20, 235 48, 235 65 C 235 84, 215 110, 178 110 C 160 110, 142 98, 130 85" stroke="#0b2545" stroke-width="22" stroke-linecap="round"/>
+                <path d="M 50 100 C 85 106, 120 85, 148 65 L 175 48" stroke="#00a6fb" stroke-width="24" stroke-linecap="round"/>
+                <polygon points="170,36 198,42 162,60" fill="#f79256" />
+                <polygon points="190,40 202,42.5 186,47" fill="#0b2545" />
+              </svg>
+            </div>
+            <span class="text-2xl font-extrabold text-brand-navy">Num<span class="text-brand-sky">IQ</span></span>
+          </div>
+          <p class="text-xs text-slate-500 max-w-sm leading-relaxed">
+            NumIQ is the premier professional development and pedagogical innovation platform empowering educators to turn abstract mathematics into deep conceptual understanding.
+          </p>
+          <div class="flex gap-3 text-slate-400">
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center hover:text-brand-navy hover:bg-slate-200 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center hover:text-brand-navy hover:bg-slate-200 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center hover:text-brand-navy hover:bg-slate-200 transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center hover:text-brand-navy hover:bg-slate-200 transition-colors"><i class="fa-brands fa-pinterest"></i></a>
+          </div>
+        </div>
+
+        <!-- Links: Pedagogy -->
+        <div>
+          <h4 class="font-bold text-slate-900 text-xs uppercase tracking-wider mb-4">Pedagogy Hub</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#strategy-lab" class="hover:text-brand-sky transition-colors">Visual Math Lab</a></li>
+            <li><a href="#tracks" class="hover:text-brand-sky transition-colors">CRA Frameworks</a></li>
+            <li><a href="#lesson-generator" class="hover:text-brand-sky transition-colors">3-Act Inquiry Tasks</a></li>
+            <li><a href="#community" class="hover:text-brand-sky transition-colors">Formative Check Library</a></li>
+            <li><a href="#" class="hover:text-brand-sky transition-colors">ELL & Scaffolding Guides</a></li>
+          </ul>
+        </div>
+
+        <!-- Links: Tracks & CEU -->
+        <div>
+          <h4 class="font-bold text-slate-900 text-xs uppercase tracking-wider mb-4">Certifications</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#tracks" class="hover:text-brand-sky transition-colors">Elementary Spatial Math</a></li>
+            <li><a href="#tracks" class="hover:text-brand-sky transition-colors">Middle School Algebra Bridge</a></li>
+            <li><a href="#tracks" class="hover:text-brand-sky transition-colors">High School Geometry Lab</a></li>
+            <li><a href="#tracks" class="hover:text-brand-sky transition-colors">AP Calculus Visual Intuition</a></li>
+            <li><a href="#pricing" class="hover:text-brand-sky transition-colors">State CEU Accreditation</a></li>
+          </ul>
+        </div>
+
+        <!-- Links: Institutional -->
+        <div>
+          <h4 class="font-bold text-slate-900 text-xs uppercase tracking-wider mb-4">Districts & Licensing</h4>
+          <ul class="space-y-2 text-xs">
+            <li><button onclick="openModal('quoteModal')" class="hover:text-brand-sky transition-colors">School Licensing Quotes</button></li>
+            <li><a href="#" class="hover:text-brand-sky transition-colors">Vendor W-9 Forms</a></li>
+            <li><a href="#" class="hover:text-brand-sky transition-colors">Title I / Title II Grant Guides</a></li>
+            <li><a href="#" class="hover:text-brand-sky transition-colors">Security & Student Privacy</a></li>
+            <li><a href="#" class="hover:text-brand-sky transition-colors">Contact Support</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <div>&copy; 2026 NumIQ Education Systems Inc. All rights reserved. Designed for math teachers worldwide.</div>
+        <div class="flex gap-6">
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Terms of Service</a>
+          <a href="#" class="hover:underline">FERPA Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODALS & OVERLAYS ==================== -->
+
+  <!-- Modal: Sign In / Educator Portal -->
+  <div id="loginModal" class="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-8 shadow-2xl border border-slate-200 relative animate-in fade-in">
+      <button onclick="closeModal('loginModal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 text-lg">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <div class="text-center mb-6">
+        <div class="w-12 h-12 bg-sky-100 text-brand-sky rounded-2xl flex items-center justify-center mx-auto text-xl mb-3">
+          <i class="fa-solid fa-user-lock"></i>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900">Educator Portal Sign In</h3>
+        <p class="text-xs text-slate-500 mt-1">Access your CEU modules, printable kits, and teacher forums</p>
+      </div>
+
+      <form onsubmit="handleAuthSim(event, 'Signed in successfully!')" class="space-y-4 text-xs font-medium">
+        <div>
+          <label class="block text-slate-700 mb-1">School or Personal Email</label>
+          <input type="email" required placeholder="teacher@school.org" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-sky">
+        </div>
+        <div>
+          <label class="block text-slate-700 mb-1">Password</label>
+          <input type="password" required placeholder="••••••••" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-sky">
+        </div>
+        <div class="flex items-center justify-between text-[11px]">
+          <label class="flex items-center gap-1.5 text-slate-600">
+            <input type="checkbox" checked class="accent-brand-sky"> Remember my login
+          </label>
+          <a href="#" class="text-brand-sky font-bold hover:underline">Forgot password?</a>
+        </div>
+        <button type="submit" class="w-full py-3 rounded-xl bg-brand-navy hover:bg-brand-deep text-white font-bold transition-all shadow">
+          Sign In to NumIQ
+        </button>
+      </form>
+
+      <div class="mt-5 pt-4 border-t border-slate-100 text-center text-xs text-slate-500">
+        New to NumIQ? <button onclick="closeModal('loginModal'); openModal('signupModal')" class="text-brand-sky font-bold underline">Create a free teacher account</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Sign Up / Free Trial -->
+  <div id="signupModal" class="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-8 shadow-2xl border border-slate-200 relative">
+      <button onclick="closeModal('signupModal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 text-lg">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800 uppercase tracking-wider">Instant 14-Day Free Access</span>
+        <h3 class="text-2xl font-extrabold text-slate-900 mt-2">Join the NumIQ Teacher Circle</h3>
+        <p class="text-xs text-slate-500 mt-1">Get immediate download access to 300+ lesson plans and visual modules.</p>
+      </div>
+
+      <form onsubmit="handleAuthSim(event, 'Welcome to NumIQ! Free trial started.')" class="space-y-3.5 text-xs font-medium">
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-slate-700 mb-1">First Name</label>
+            <input type="text" required placeholder="Maria" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-sky">
+          </div>
+          <div>
+            <label class="block text-slate-700 mb-1">Last Name</label>
+            <input type="text" required placeholder="Rodriguez" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-sky">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-slate-700 mb-1">Work / School Email</label>
+          <input type="email" required placeholder="mrodriguez@district.edu" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-sky">
+        </div>
+
+        <div>
+          <label class="block text-slate-700 mb-1">Primary Teaching Grade Band</label>
+          <select class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-sky bg-white">
+            <option>Elementary (Grades 3 - 5)</option>
+            <option selected>Middle School (Grades 6 - 8)</option>
+            <option>High School (Grades 9 - 12)</option>
+            <option>AP & Advanced Calculus / Statistics</option>
+          </select>
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-brand-deep to-brand-blue hover:opacity-95 text-white font-bold transition-all shadow-md">
+            Activate My Free Educator Account
+          </button>
+        </div>
+      </form>
+      <div class="text-[11px] text-slate-400 text-center mt-3">No credit card required for teacher trials.</div>
+    </div>
+  </div>
+
+  <!-- Modal: Video Demo Player -->
+  <div id="demoVideoModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="bg-slate-900 rounded-3xl max-w-3xl w-full p-6 shadow-2xl border border-slate-800 relative text-white">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-brand-amber"></span>
+          <h4 class="font-bold text-sm">NumIQ Methodology & Platform Overview (2:15)</h4>
+        </div>
+        <button onclick="closeModal('demoVideoModal')" class="text-slate-400 hover:text-white">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      
+      <!-- Video Placeholder Frame -->
+      <div class="mt-4 aspect-video bg-slate-950 rounded-2xl flex flex-col items-center justify-center border border-slate-800 relative overflow-hidden group">
+        <div class="w-20 h-20 rounded-full bg-brand-sky/20 border-2 border-brand-cyan flex items-center justify-center text-brand-cyan text-3xl group-hover:scale-110 transition-transform cursor-pointer" onclick="showFeedbackToast('Video playing simulated demo stream')">
+          <i class="fa-solid fa-play ml-1"></i>
+        </div>
+        <p class="text-xs text-slate-400 mt-4">Click to play "Visual Scaffolding for Reluctant Math Learners"</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: District Quote Request -->
+  <div id="quoteModal" class="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-8 shadow-2xl border border-slate-200 relative">
+      <button onclick="closeModal('quoteModal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 text-lg">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <div class="w-12 h-12 bg-amber-100 text-brand-amber rounded-2xl flex items-center justify-center mx-auto text-xl mb-3">
+          <i class="fa-solid fa-school"></i>
+        </div>
+        <h3 class="text-2xl font-extrabold text-slate-900">District & Department Licensing</h3>
+        <p class="text-xs text-slate-500 mt-1">Receive an official quote, W-9, and curriculum crosswalk within 24 hours.</p>
+      </div>
+
+      <form onsubmit="handleAuthSim(event, 'Quote request submitted! A specialist will contact you.')" class="space-y-3.5 text-xs font-medium">
+        <div>
+          <label class="block text-slate-700 mb-1">School District / Institution Name</label>
+          <input type="text" required placeholder="e.g. Metro Public Schools" class="w-full px-3 py-2 rounded-xl border border-slate-300">
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-slate-700 mb-1">Your Role</label>
+            <input type="text" required placeholder="Math Chair / Principal" class="w-full px-3 py-2 rounded-xl border border-slate-300">
+          </div>
+          <div>
+            <label class="block text-slate-700 mb-1">Estimated Math Teachers</label>
+            <select class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white">
+              <option>1 - 5 teachers</option>
+              <option>6 - 20 teachers</option>
+              <option>21 - 100 teachers</option>
+              <option>100+ District-wide</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="block text-slate-700 mb-1">Work Email</label>
+          <input type="email" required placeholder="coordinator@district.org" class="w-full px-3 py-2 rounded-xl border border-slate-300">
+        </div>
+        <button type="submit" class="w-full py-3 rounded-xl bg-brand-navy hover:bg-brand-deep text-white font-bold transition-all shadow-md">
+          Request Official Proposal & W-9
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Notification Toast Box -->
+  <div id="toastNotification" class="fixed bottom-6 left-6 z-50 bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-2xl border border-slate-700 flex items-center gap-3 transition-all duration-300 opacity-0 pointer-events-none translate-y-4">
+    <div id="toastIcon" class="text-brand-cyan"><i class="fa-solid fa-circle-check"></i></div>
+    <span id="toastMessage" class="text-xs font-medium">Action complete</span>
+  </div>
+
+  <!-- ==================== JAVASCRIPT APP LOGIC ==================== -->
+  <script>
+    // Strategy Finder Data Matrix
+    const strategyData = {
+      elementary: {
+        topics: [
+          { id: 'fractions', name: 'Fraction Models' },
+          { id: 'placevalue', name: 'Base-10 Arrays' },
+          { id: 'multiplication', name: 'Area Multiplication' }
+        ],
+        details: {
+          fractions: {
+            title: "Equal Slicing & Double Number Lines",
+            headline: "Demystifying Fraction Magnitude with Dual Scales",
+            summary: "Elementary students struggle when comparing 3/8 to 5/12 because they compare whole numbers (8 vs 12). By locking both bars onto a calibrated 0-to-1 number line, relative size becomes visually self-evident.",
+            pitfall: "Students assume larger denominators inherently mean larger quantities because 8 > 4.",
+            hook: "If two runners run 3/4 of a mile vs 5/6 of a mile, who has less distance left until the water station?",
+            visualType: 'fractionBar',
+            paramLabel: 'Denominator Slices',
+            paramMin: 2, paramMax: 12, defaultVal: 4
+          },
+          placevalue: {
+            title: "Multi-Digit Base Ten Visualizer",
+            headline: "Regrouping Without Mindless Borrowing",
+            summary: "Physical and pictorial base-10 blocks show that regrouping in subtraction is not 'crossing off numbers' but trading one ten-rod for ten individual units.",
+            pitfall: "Writing 52 - 38 as 24 because students always subtract smaller digit from larger regardless of position.",
+            hook: "You have five $10 bills and two $1 bills. How do you pay someone $8 without getting change?",
+            visualType: 'gridArray',
+            paramLabel: 'Tens Grouping',
+            paramMin: 1, paramMax: 6, defaultVal: 3
+          },
+          multiplication: {
+            title: "2D Area Array Model",
+            headline: "Connecting Geometry to Arithmetic Scaling",
+            summary: "Arrays shift students from skip-counting counting-all methods to multi-row spatial composition.",
+            pitfall: "Treating 4 x 6 as completely unrelated to 6 x 4 (missing commutativity).",
+            hook: "How many floor tiles are needed for a 4-by-6 room? Can you count them in under 2 seconds?",
+            visualType: 'gridArray',
+            paramLabel: 'Grid Columns',
+            paramMin: 2, paramMax: 8, defaultVal: 5
+          }
+        }
+      },
+      middle: {
+        topics: [
+          { id: 'negatives', name: 'Negative Integers' },
+          { id: 'linear', name: 'Slope & Rates' },
+          { id: 'ratios', name: 'Proportional Thinking' }
+        ],
+        details: {
+          negatives: {
+            title: "Opposite Vector Number Line",
+            headline: "Visualizing Directional Vectors for Integers",
+            summary: "Treat positive and negative integers as vectors with direction and magnitude. Subtraction represents flipping 180 degrees rather than taking away.",
+            pitfall: "Over-memorizing 'two negatives make a plus' so they incorrectly compute -3 + -4 as +7.",
+            hook: "A submarine is at -40 meters and drops a ballast weighing -15 kg of buoyancy. What happens to its elevation?",
+            visualType: 'vectorLine',
+            paramLabel: 'Vector Magnitude',
+            paramMin: 1, paramMax: 10, defaultVal: 5
+          },
+          linear: {
+            title: "Rate of Change Triangle",
+            headline: "Connecting Steepness to Ratio Unit Rates",
+            summary: "Draw gradient slope staircases alongside proportional tables to unite rise/run with real-life constant speeds.",
+            pitfall: "Inverting slope into run over rise (&Delta;x / &Delta;y) when calculating from standard graphs.",
+            hook: "Which wheelchair ramp is safer: one that rises 3 feet over 12 feet, or 2 feet over 6 feet?",
+            visualType: 'slopeTriangle',
+            paramLabel: 'Steepness Ratio',
+            paramMin: 1, paramMax: 8, defaultVal: 3
+          },
+          ratios: {
+            title: "Double Tape Scaling Model",
+            headline: "Part-to-Part vs Part-to-Whole Multipliers",
+            summary: "Tape diagrams give concrete anchors for paint recipes and scale drawings without algebra symbols.",
+            pitfall: "Adding the same quantity to both sides of a ratio thinking it preserves proportionality (e.g. 2:3 becomes 3:4).",
+            hook: "If lemonade has 2 cups lemon juice to 3 cups water, will adding 1 cup of each make it sweeter or more sour?",
+            visualType: 'fractionBar',
+            paramLabel: 'Batch Multiplier',
+            paramMin: 1, paramMax: 6, defaultVal: 2
+          }
+        }
+      },
+      high: {
+        topics: [
+          { id: 'quadratics', name: 'Binomial Expansion' },
+          { id: 'trig', name: 'Unit Circle Projections' },
+          { id: 'transformations', name: 'Function Scaling' }
+        ],
+        details: {
+          quadratics: {
+            title: "Area Model of (x + a)(x + b)",
+            headline: "Visualizing the Missing Middle Term",
+            summary: "By arranging binomial terms as sides of a rectangle, students observe the four partial product sub-rectangles, making FOIL an intuitive byproduct.",
+            pitfall: "Assuming (x + 4)&sup2; is simply x&sup2; + 16, forgetting the two 4x corner areas.",
+            hook: "If you expand a square field by 4 meters on each side, why is the added area much more than 16 square meters?",
+            visualType: 'algebraTiles',
+            paramLabel: 'Added Constant (a)',
+            paramMin: 1, paramMax: 8, defaultVal: 3
+          },
+          trig: {
+            title: "Unit Circle Cos/Sin Ray Projections",
+            headline: "Connecting Angles to Real-Time Coordinates",
+            summary: "Map the rotation of the hypotenuse directly onto horizontal (cosine) and vertical (sine) shadow projections.",
+            pitfall: "Confusing radiant angle rotation with arc length and memorizing radians without knowing circumference ratios.",
+            hook: "As a Ferris wheel rotates smoothly, why is your vertical ascent slowest at the very top and bottom?",
+            visualType: 'unitCircle',
+            paramLabel: 'Rotation Angle (&deg;)',
+            paramMin: 1, paramMax: 8, defaultVal: 3
+          },
+          transformations: {
+            title: "Parent Function Transformation Canvas",
+            headline: "Why f(x - c) Shifts Right Instead of Left",
+            summary: "Demonstrate input compensation: the x-variable must be c units larger just to feed the same value to the core function f.",
+            pitfall: "Intuitively thinking f(x - 2) moves left because minus indicates negative coordinates.",
+            hook: "If your watch runs 10 minutes slow, do you arrive earlier or later than intended?",
+            visualType: 'slopeTriangle',
+            paramLabel: 'Horizontal Shift',
+            paramMin: 1, paramMax: 6, defaultVal: 2
+          }
+        }
+      },
+      calc: {
+        topics: [
+          { id: 'riemann', name: 'Riemann Sums' },
+          { id: 'derivatives', name: 'Secant to Tangent' },
+          { id: 'series', name: 'Taylor Approximations' }
+        ],
+        details: {
+          riemann: {
+            title: "Rectangular Slice Integration Model",
+            headline: "Limit of Finite Partitions to Exact Area",
+            summary: "Transition from left/right midpoint Riemann rectangles to an infinite continuum, observing error bounds diminish in real time.",
+            pitfall: "Thinking definite integrals calculate absolute geometric area when curves dip beneath the x-axis.",
+            hook: "How does a car speedometer calculate exact total distance traveled when speed is constantly fluctuating?",
+            visualType: 'riemannBars',
+            paramLabel: 'Partition Count (n)',
+            paramMin: 2, paramMax: 20, defaultVal: 6
+          },
+          derivatives: {
+            title: "Secant Line Squeeze to Tangent",
+            headline: "Instantaneous Velocity as Limiting Secant",
+            summary: "Slide point Q closer to point P to illustrate division by zero being conquered through limits.",
+            pitfall: "Believing derivative is simply dy/dx as a static fraction rather than an operator.",
+            hook: "Can a traffic camera clock your speed at an exact single instant if time elapsed is zero?",
+            visualType: 'slopeTriangle',
+            paramLabel: 'Squeeze &Delta;x',
+            paramMin: 1, paramMax: 8, defaultVal: 4
+          },
+          series: {
+            title: "Polynomial Polynomial Convergence",
+            headline: "Constructing Smooth Functions with Powers",
+            summary: "Layer higher order derivatives to visually watch a polynomial hug sine or exponential curves closer and closer.",
+            pitfall: "Assuming Taylor approximations converge everywhere rather than inside a specific radius of convergence.",
+            hook: "How does an offline pocket calculator compute sin(1.375) in a microsecond with no geometry compass?",
+            visualType: 'algebraTiles',
+            paramLabel: 'Polynomial Degree',
+            paramMin: 1, paramMax: 7, defaultVal: 3
+          }
+        }
+      }
+    };
+
+    // State Variables
+    let currentGrade = 'middle';
+    let currentTopicId = 'negatives';
+    let currentParamVal = 4;
+
+    // Daily Tips Array for Numi Mascot
+    const numiTips = [
+      "Before teaching the fraction division rule 'keep-change-flip', ask: 'How many 25-cent coins are in 3 dollars?' (3 ÷ 1/4 = 12). The reciprocal rule suddenly makes physical sense!",
+      "Ban the word 'cancel' in fractions and equations. Replace it with 'makes one' (division) or 'makes zero' (additive inverse). It clears up 80% of algebraic errors.",
+      "Give students the answer first! Challenge them: 'The answer is 42. Write three different math questions: one easy, one visual, and one tricky.'",
+      "When introducing negative multiplication, use a bank overdraft or temperature change context before symbols: -3 cold cubes dropped into a warm bath.",
+      "Celebrate wrong answers! Label mistakes 'First Draft Thinking'. Ask the room: 'What brilliant intuition led to this near-miss?'"
+    ];
+    let numiTipIndex = 0;
+
+    // Daily Hero Dilemmas
+    const heroDilemmas = [
+      {
+        dilemma: '"Students continually confuse -(-x) with multiplying two negative factors."',
+        solution: 'Shift from "two negatives make a positive" memorization to walking backwards facing in the negative direction on a giant taped floor grid.',
+        tag: 'Number Line Vectors'
+      },
+      {
+        dilemma: '"Students write (x + 3)² = x² + 9 every single year on the algebra exam."',
+        solution: 'Have students physically build a square using an x-by-x tile and unit blocks. They instantly see the two missing 3x rectangles along the sides.',
+        tag: '2D Area Dissection'
+      },
+      {
+        dilemma: '"Middle schoolers struggle with cross-multiplying without knowing why it works."',
+        solution: 'Show that cross-multiplication is just multiplying both sides by the product of the two denominators in disguise.',
+        tag: 'Scale Multipliers'
+      }
+    ];
+    let heroIndex = 0;
+
+    // Initialize on load
+    window.onload = function () {
+      initStrategyLab();
+      renderVisualCanvas();
+      
+      // Auto-open mascot bubble slightly after load for delightful discovery
+      setTimeout(() => {
+        const bubble = document.getElementById('numiSpeechBubble');
+        if (bubble) {
+          bubble.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-3');
+        }
+      }, 2500);
+
+      // Mobile Menu listener
+      const menuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    };
+
+    function initStrategyLab() {
+      // Set initial buttons
+      const topicContainer = document.getElementById('topicButtonGroup');
+      const gradeTopics = strategyData[currentGrade].topics;
+      topicContainer.innerHTML = '';
+
+      gradeTopics.forEach((t, i) => {
+        const btn = document.createElement('button');
+        btn.innerText = t.name;
+        btn.id = 'topic-btn-' + t.id;
+        const isActive = t.id === currentTopicId;
+        btn.className = `px-3.5 py-1.5 text-xs font-bold rounded-xl transition-all ${
+          isActive 
+            ? 'bg-brand-sky text-white shadow-md' 
+            : 'bg-white/10 hover:bg-white/20 text-slate-200'
+        }`;
+        btn.onclick = () => setStrategyTopic(t.id);
+        topicContainer.appendChild(btn);
+      });
+
+      updateStrategyCard();
+    }
+
+    function setStrategyLevel(level) {
+      currentGrade = level;
+      // Update grade band buttons
+      const group = document.getElementById('gradeBandButtonGroup');
+      const buttons = group.querySelectorAll('.strategy-btn');
+      const levels = ['elementary', 'middle', 'high', 'calc'];
+      
+      buttons.forEach((btn, idx) => {
+        if (levels[idx] === level) {
+          btn.className = 'strategy-btn px-3 py-2 text-xs font-bold rounded-xl border border-brand-cyan bg-brand-cyan text-brand-navy font-extrabold shadow transition-all text-center';
+        } else {
+          btn.className = 'strategy-btn px-3 py-2 text-xs font-bold rounded-xl border border-white/20 bg-white/10 hover:bg-white/20 transition-all text-center text-white';
+        }
+      });
+
+      // Default to first topic of this grade
+      currentTopicId = strategyData[level].topics[0].id;
+      initStrategyLab();
+      renderVisualCanvas();
+    }
+
+    function setStrategyTopic(topicId) {
+      currentTopicId = topicId;
+      const topicContainer = document.getElementById('topicButtonGroup');
+      const buttons = topicContainer.querySelectorAll('button');
+      
+      buttons.forEach(btn => {
+        if (btn.id === 'topic-btn-' + topicId) {
+          btn.className = 'px-3.5 py-1.5 text-xs font-bold rounded-xl transition-all bg-brand-sky text-white shadow-md';
+        } else {
+          btn.className = 'px-3.5 py-1.5 text-xs font-bold rounded-xl transition-all bg-white/10 hover:bg-white/20 text-slate-200';
+        }
+      });
+
+      updateStrategyCard();
+      renderVisualCanvas();
+    }
+
+    function updateStrategyCard() {
+      const data = strategyData[currentGrade].details[currentTopicId];
+      if (!data) return;
+
+      document.getElementById('strategyHeadline').innerText = data.headline;
+      document.getElementById('strategySummary').innerText = data.summary;
+      document.getElementById('strategyPitfall').innerText = data.pitfall;
+      document.getElementById('strategyHook').innerText = `"${data.hook}"`;
+      document.getElementById('visualModelTitle').innerText = `${currentTopicId}_conceptual_proof.svg`;
+
+      // Update slider controls
+      const slider = document.getElementById('paramSlider');
+      slider.min = data.paramMin;
+      slider.max = data.paramMax;
+      slider.value = data.defaultVal;
+      currentParamVal = data.defaultVal;
+      document.getElementById('paramValue').innerText = `n = ${currentParamVal}`;
+    }
+
+    function updateVisualParam(val) {
+      currentParamVal = parseInt(val);
+      document.getElementById('paramValue').innerText = `n = ${val}`;
+      renderVisualCanvas();
+    }
+
+    // Dynamic Visual SVG Canvas Generator
+    function renderVisualCanvas() {
+      const container = document.getElementById('visualCanvasContainer');
+      const data = strategyData[currentGrade].details[currentTopicId];
+      if (!container || !data) return;
+
+      let svgHtml = '';
+      const n = currentParamVal;
+
+      if (data.visualType === 'vectorLine') {
+        // Dynamic Number Line Vector
+        const width = 360, height = 140;
+        const zeroX = 180;
+        const step = 22;
+        const targetX = zeroX + (n * step * (currentTopicId === 'negatives' ? -1 : 1));
+
+        svgHtml = `
+          <svg viewBox="0 0 ${width} ${height}" class="w-full max-w-sm h-36">
+            <!-- Axis line -->
+            <line x1="20" y1="70" x2="340" y2="70" stroke="#64748b" stroke-width="2" />
+            <!-- Ticks -->
+            ${[-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5].map(v => {
+              const x = zeroX + (v * step);
+              return `
+                <line x1="${x}" y1="64" x2="${x}" y2="76" stroke="#94a3b8" stroke-width="1.5" />
+                <text x="${x}" y="92" fill="${v === 0 ? '#38bdf8' : '#94a3b8'}" font-size="10" font-family="monospace" text-anchor="middle" font-weight="${v === 0 ? 'bold' : 'normal'}">${v}</text>
+              `;
+            }).join('')}
+            
+            <!-- Animated Directional Vector Arc -->
+            <path d="M ${zeroX} 60 Q ${(zeroX + targetX)/2} 20 ${targetX} 60" fill="none" stroke="#00c2cb" stroke-width="3" stroke-dasharray="4" />
+            <circle cx="${zeroX}" cy="60" r="4" fill="#38bdf8" />
+            <polygon points="${targetX},60 ${targetX + 6},50 ${targetX - 6},50" fill="#f79256" transform="rotate(${targetX < zeroX ? -90 : 90} ${targetX} 60)" />
+            
+            <!-- Vector label -->
+            <text x="${(zeroX + targetX)/2}" y="24" fill="#f79256" font-size="11" font-weight="bold" font-family="monospace" text-anchor="middle">
+              Vector: ${targetX < zeroX ? '-' : '+'}${Math.abs(n)} units
+            </text>
+          </svg>
+        `;
+      } else if (data.visualType === 'algebraTiles' || data.visualType === 'gridArray') {
+        // Dynamic Algebra Tile Area Dissection
+        const tileScale = 14;
+        const boxX = 60, boxA = n * 8;
+        svgHtml = `
+          <svg viewBox="0 0 320 200" class="w-full max-w-sm h-44">
+            <!-- Main X^2 square -->
+            <rect x="40" y="30" width="${boxX}" height="${boxX}" fill="#0284c7" rx="4" stroke="#38bdf8" stroke-width="1.5"/>
+            <text x="${40 + boxX/2}" y="${30 + boxX/2 + 5}" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">x²</text>
+            
+            <!-- Side rectangle (x * a) -->
+            <rect x="${40 + boxX + 6}" y="30" width="${boxA}" height="${boxX}" fill="#f97316" rx="4" stroke="#fb923c" stroke-width="1.5"/>
+            <text x="${40 + boxX + 6 + boxA/2}" y="${30 + boxX/2 + 5}" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">${n}x</text>
+
+            <!-- Bottom rectangle (a * x) -->
+            <rect x="40" y="${30 + boxX + 6}" width="${boxX}" height="${boxA}" fill="#f97316" rx="4" stroke="#fb923c" stroke-width="1.5"/>
+            <text x="${40 + boxX/2}" y="${30 + boxX + 6 + boxA/2 + 4}" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">${n}x</text>
+
+            <!-- Corner constant square (a^2) -->
+            <rect x="${40 + boxX + 6}" y="${30 + boxX + 6}" width="${boxA}" height="${boxA}" fill="#10b981" rx="4" stroke="#34d399" stroke-width="1.5"/>
+            <text x="${40 + boxX + 6 + boxA/2}" y="${30 + boxX + 6 + boxA/2 + 4}" fill="#ffffff" font-size="10" font-weight="bold" text-anchor="middle">${n*n}</text>
+            
+            <!-- Formula Summary -->
+            <text x="160" y="185" fill="#38bdf8" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">
+              Area = x² + ${2*n}x + ${n*n}
+            </text>
+          </svg>
+        `;
+      } else if (data.visualType === 'riemannBars') {
+        // Riemann Sums partition generator
+        const width = 320, height = 150;
+        const bars = Math.max(2, n);
+        const barWidth = 220 / bars;
+        let rects = '';
+        for (let i = 0; i < bars; i++) {
+          const bx = 50 + (i * barWidth);
+          const t = i / bars;
+          const bh = (t * t * 75) + 18;
+          const by = 120 - bh;
+          rects += `<rect x="${bx}" y="${by}" width="${barWidth - 2}" height="${bh}" fill="#0ea5e9" opacity="0.65" stroke="#38bdf8" stroke-width="1" />`;
+        }
+
+        svgHtml = `
+          <svg viewBox="0 0 ${width} ${height}" class="w-full max-w-sm h-36">
+            <line x1="40" y1="120" x2="290" y2="120" stroke="#64748b" stroke-width="2" />
+            <line x1="50" y1="20" x2="50" y2="130" stroke="#64748b" stroke-width="2" />
+            <!-- Continuous curve f(x) -->
+            <path d="M 50 102 Q 160 90 270 25" fill="none" stroke="#f59e0b" stroke-width="3" />
+            ${rects}
+            <text x="160" y="142" fill="#94a3b8" font-size="10" font-family="monospace" text-anchor="middle">
+              ${bars} Sub-intervals (Approximating Area Under Curve)
+            </text>
+          </svg>
+        `;
+      } else {
+        // Fraction Bars or default
+        const slices = Math.max(2, n);
+        const sliceWidth = 240 / slices;
+        let cells = '';
+        for (let i = 0; i < slices; i++) {
+          const isFilled = i < Math.ceil(slices / 2);
+          cells += `
+            <rect x="${40 + (i * sliceWidth)}" y="40" width="${sliceWidth - 2}" height="45" rx="3" 
+                  fill="${isFilled ? '#0284c7' : '#1e293b'}" stroke="#38bdf8" stroke-width="1.5" />
+          `;
+        }
+
+        svgHtml = `
+          <svg viewBox="0 0 320 130" class="w-full max-w-sm h-32">
+            ${cells}
+            <text x="160" y="112" fill="#38bdf8" font-size="12" font-family="monospace" text-anchor="middle" font-weight="bold">
+              Fraction: ${Math.ceil(slices / 2)} / ${slices} partitioned
+            </text>
+          </svg>
+        `;
+      }
+
+      container.innerHTML = svgHtml;
+    }
+
+    // Hero Tip Switcher
+    function cycleHeroTip(direction) {
+      heroIndex = (heroIndex + direction + heroDilemmas.length) % heroDilemmas.length;
+      const item = heroDilemmas[heroIndex];
+      document.getElementById('heroDilemmaText').innerText = item.dilemma;
+      document.getElementById('heroSolutionText').innerText = item.solution;
+      document.getElementById('heroStrategyTag').innerText = item.tag;
+    }
+
+    // Lesson Plan Template Switcher
+    const lessonTemplates = {
+      fractions: {
+        title: "Fraction Equivalence Through Visual Slicing",
+        grade: "Grade 4-6 Mathematics • NumIQ Inquiry Lab",
+        partA: "Examine the two chocolate bars below. Bar A is divided into 3 equal pieces. Bar B is divided into 6 equal pieces. Color in 2 parts of Bar A and 4 parts of Bar B.",
+        partB: "What happens to the number of slices when we multiply both numerator and denominator by 2? Why doesn't the total eaten amount change?",
+        partC: "Can a fraction with denominator 5 ever be equivalent to a fraction with denominator 12? Explain mathematically without using a calculator."
+      },
+      pythagoras: {
+        title: "Pythagorean Theorem Geometric Dissection Proof",
+        grade: "Grade 8-9 Geometry • NumIQ Inquiry Lab",
+        partA: "Construct a right triangle with legs 3 cm and 4 cm. On graph paper, draw explicit square grids on leg a (3x3), leg b (4x4), and hypotenuse c.",
+        partB: "Count the total unit squares inside Area A and Area B. How do they compare to the total squares on hypotenuse square C?",
+        partC: "Does this relationship hold true if we construct semi-circles or equilateral triangles on each side instead of squares? Defend your claim."
+      },
+      quadratics: {
+        title: "Projectile Quadratics & Trajectory Vertex Analysis",
+        grade: "Algebra I / II • NumIQ Inquiry Lab",
+        partA: "A basketball follows trajectory h(t) = -16t² + 32t + 4. Complete the table of heights for t = 0, 0.5, 1.0, 1.5, 2.0 seconds.",
+        partB: "Locate the vertex using axis of symmetry formula t = -b / (2a). Explain why the apex occurs exactly halfway between ground-level symmetric points.",
+        partC: "If the hoop is 10 feet tall at distance t = 1.8s, does this shot swish or fall short? Show algebraic proof."
+      }
+    };
+
+    function switchLessonTemplate(type) {
+      const template = lessonTemplates[type];
+      if (!template) return;
+
+      document.getElementById('sheetTitle').innerText = template.title;
+      document.getElementById('sheetGrade').innerText = template.grade;
+      document.getElementById('sheetPartA').innerText = template.partA;
+      document.getElementById('sheetPartB').innerText = template.partB;
+      document.getElementById('sheetPartC').innerText = template.partC;
+
+      // Update active tabs styling
+      const tabs = document.querySelectorAll('.lesson-tab-btn');
+      tabs.forEach(t => {
+        t.className = 'lesson-tab-btn px-4 py-3 text-sm font-semibold border-b-2 border-transparent text-slate-500 hover:text-slate-800 whitespace-nowrap';
+      });
+      event.currentTarget.className = 'lesson-tab-btn px-4 py-3 text-sm font-bold border-b-2 border-brand-sky text-brand-navy whitespace-nowrap';
+    }
+
+    function adjustScaffold(level) {
+      if (level === 'supported') {
+        showFeedbackToast('Applied visual prompts, word banks, and pre-drawn grids.');
+      } else if (level === 'advanced') {
+        showFeedbackToast('Removed numeric hints; added open generalization proofs.');
+      } else {
+        showFeedbackToast('Standard balanced scaffolding restored.');
+      }
+    }
+
+    // Numi Mascot Floating Widget Interactions
+    function toggleNumiBubble() {
+      const bubble = document.getElementById('numiSpeechBubble');
+      bubble.classList.toggle('opacity-0');
+      bubble.classList.toggle('pointer-events-none');
+      bubble.classList.toggle('translate-y-3');
+    }
+
+    function shuffleNumiTip() {
+      numiTipIndex = (numiTipIndex + 1) % numiTips.length;
+      document.getElementById('numiQuoteText').innerText = numiTips[numiTipIndex];
+    }
+
+    function copyNumiTip() {
+      const text = document.getElementById('numiQuoteText').innerText;
+      copyToClipboard(text);
+      showFeedbackToast('Copied pedagogical spark to clipboard!');
+    }
+
+    function copyShareLink() {
+      copyToClipboard('https://numiq.education/lessons/share/fraction-visual-slicing');
+      showFeedbackToast('Google Slides & Classroom link copied!');
+    }
+
+    function downloadResourceToast() {
+      showFeedbackToast('Preparing PDF lesson guide & student master slides...');
+      setTimeout(() => {
+        showFeedbackToast('Download complete: NumIQ_Inquiry_Pack.pdf');
+      }, 1500);
+    }
+
+    function triggerPrintModal() {
+      showFeedbackToast('Formatted ready-to-print view generated for your printer.');
+      window.print();
+    }
+
+    function previewTrack(trackName) {
+      showFeedbackToast(`Opening syllabus for "${trackName}"`);
+      openModal('signupModal');
+    }
+
+    // Modal Control Helpers
+    function openModal(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.remove('hidden');
+        el.classList.add('flex');
+      }
+    }
+
+    function closeModal(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.add('hidden');
+        el.classList.remove('flex');
+      }
+    }
+
+    function handleAuthSim(e, message) {
+      e.preventDefault();
+      closeModal('loginModal');
+      closeModal('signupModal');
+      closeModal('quoteModal');
+      showFeedbackToast(message);
+    }
+
+    function handleNewsletter(e) {
+      e.preventDefault();
+      e.target.reset();
+      showFeedbackToast('Subscribed! Check your inbox for this Friday’s hook.');
+    }
+
+    // Generic Clipboard Fallback
+    function copyToClipboard(text) {
+      const tempInput = document.createElement("input");
+      tempInput.style.position = "absolute";
+      tempInput.style.left = "-9999px";
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand("copy");
+      } catch (err) {
+        console.error("Copy failed", err);
+      }
+      document.body.removeChild(tempInput);
+    }
+
+    // Custom Toast Notification System (replaces alert())
+    function showFeedbackToast(msg) {
+      const toast = document.getElementById('toastNotification');
+      const msgBox = document.getElementById('toastMessage');
+      if (!toast || !msgBox) return;
+
+      msgBox.innerText = msg;
+      toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+      toast.classList.add('opacity-100', 'translate-y-0');
+
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+        toast.classList.remove('opacity-100', 'translate-y-0');
+      }, 3500);
+    }
+  </script>
+</body>
+</html>
